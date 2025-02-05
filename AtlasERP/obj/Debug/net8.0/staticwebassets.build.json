@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "eNS6zncSkANRgIT+Bl4ha037HMYESSW7aolpK4iq9Cg=",
+  "Source": "AtlasERP",
+  "BasePath": "_content/AtlasERP",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AtlasERP\\wwwroot",
+      "Source": "AtlasERP",
+      "ContentRoot": "C:\\Users\\pahol\\source\\repos\\AtlasERP\\AtlasERP\\wwwroot\\",
+      "BasePath": "_content/AtlasERP",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

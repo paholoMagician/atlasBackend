@@ -1,0 +1,470 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "atlasErpContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "AtlasERP",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[agencia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[agenciagarantia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[asesorcliente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[asignacionmaquinacliente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[asignacionprovincias]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[asignacionTecnicoTicket]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[asignModUser]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[asignRepuRequer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AuditApp]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[auditoria]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[bodegas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cardinal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cliente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[contrato]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cronograma]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[cronograma1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DimDate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[empresa]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[entytrancab]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[entytrandet]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FileControl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[fileMediaTicket]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[garantias]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[imgFile]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[instituto]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[intervalosTicket]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[intervalosTicketMsj]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[invmov]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[localidad]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[localidadcobertura]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mantemaqcro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[maquinaria]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[marca]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[marcaRepuestos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MasterTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mensajeria]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[mensajeriaTicket]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[modelo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[modeloMarcaRepuestos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[module_mobile]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[modulo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[prodbodegasigna]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[repbodasigna]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[repuestos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[resumenMantenimiento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ticketRequerimiento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ticketresolucion]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[usuario]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UsuarioPortalTicket]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[versionamiento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[versionCMS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[vw_Calendar]",
+         "ObjectType": 3
+      },
+      {
+         "Name": "[dbo].[ActualizarAgenciaEstado]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[calculoAsignacionCronograma]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CambioEstados]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CantidadAgenMaqui]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CliBodegAsign]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CrearCuenta]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CrearCuentaHelpDesk]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[detalleCrono]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[detalleCronoUnit]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[EliminarMaquinaria]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[generarCronograma]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[IMGGeneralControl]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ImgProduct]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[LoginCLient]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[MaquinariaAgencia]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[MaquinariaBodegaCliente]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObetenerTecnicoProvincias]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerAgencias]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[obtenerAgenciasCardinal]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerAgenciasLocalidad]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerAgenciaZonificada]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerAsignacionTecnicoReuqerimiento]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerBodegas]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerCantidadAgenciasProv]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerCLientes]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerConsumoApp]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerContratos]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerCotizacion]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerCrono]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerCronoMobilTecnico]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[obtenerGruposMarcasMaq]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerItemsBodegas]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerMantenimiento]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerMaquinaria]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerMaquinasSinBodega]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerMaquinaUnit]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerMensajes]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerMensajesTIcket]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerMmaquinariaHistorico]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerRepuestos]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerRepuestosRequerimientos]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerTecniCrono]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerTicketsRequerimientos]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerUsuarios]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerUsuarioUnit]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ProcesoTransdferenciaBod]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RepoOrdenTransferProd]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReporteMantenimiento]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReporteTecnicoCorrectivo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UpdateEstadoModulo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CalcularFecha]",
+         "ObjectType": 2
+      },
+      {
+         "Name": "[dbo].[CantidadMaquinasMantenimiento]",
+         "ObjectType": 2
+      },
+      {
+         "Name": "[dbo].[obtenerDatosAgencia]",
+         "ObjectType": 2
+      },
+      {
+         "Name": "[dbo].[ObtenerDatosAgenciaLocal]",
+         "ObjectType": 2
+      },
+      {
+         "Name": "[dbo].[ObtenerSiguienteValor]",
+         "ObjectType": 2
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
