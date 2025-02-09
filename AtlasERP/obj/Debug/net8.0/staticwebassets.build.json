@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eNS6zncSkANRgIT+Bl4ha037HMYESSW7aolpK4iq9Cg=",
+  "Hash": "/z1ymCUvZK1AU2AAlJi7k9l/tllPI+tEinM8H20+gt8=",
   "Source": "AtlasERP",
   "BasePath": "_content/AtlasERP",
   "Mode": "Default",
@@ -10,10 +10,87 @@
     {
       "Name": "AtlasERP\\wwwroot",
       "Source": "AtlasERP",
-      "ContentRoot": "C:\\Users\\pahol\\source\\repos\\AtlasERP\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\962dc32f046139c6986454dabfda541f.jpg\\962dc32f046139c6986454dabfda541f.jpg",
+      "SourceId": "AtlasERP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "BasePath": "_content/AtlasERP",
+      "RelativePath": "storage/962dc32f046139c6986454dabfda541f.jpg/962dc32f046139c6986454dabfda541f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\storage\\962dc32f046139c6986454dabfda541f.jpg\\962dc32f046139c6986454dabfda541f.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\atlas_erp_logo_b.png\\atlas_erp_logo_b.png",
+      "SourceId": "AtlasERP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "BasePath": "_content/AtlasERP",
+      "RelativePath": "storage/atlas_erp_logo_b.png/atlas_erp_logo_b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\storage\\atlas_erp_logo_b.png\\atlas_erp_logo_b.png"
+    },
+    {
+      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\download.jpeg\\download.jpeg",
+      "SourceId": "AtlasERP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "BasePath": "_content/AtlasERP",
+      "RelativePath": "storage/download.jpeg/download.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\storage\\download.jpeg\\download.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\images.jpeg\\images.jpeg",
+      "SourceId": "AtlasERP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "BasePath": "_content/AtlasERP",
+      "RelativePath": "storage/images.jpeg/images.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\storage\\images.jpeg\\images.jpeg"
+    }
+  ]
 }

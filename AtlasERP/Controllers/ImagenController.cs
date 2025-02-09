@@ -24,18 +24,15 @@ namespace AtlasERP.Controllers
         [Route("crearCarpeta/{nombre}")]
         public async Task<IActionResult> crearCarpeta([FromForm] IMGmodelClass request, [FromRoute] string nombre)
         {
-            string fileModelpath = Path.Combine(Directory.GetCurrentDirectory(), "fileModel");
-            string assetsPath = Path.Combine(fileModelpath, "Assets");
+            string fileModelpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+            string assetsPath = Path.Combine(fileModelpath, "storage");
             string imagePath = Path.Combine(assetsPath, nombre);
-
-            try
+            try 
             {
-
                 if (!Directory.Exists(assetsPath))
                 {
                     Directory.CreateDirectory(assetsPath);
                 }
-
                 if (!Directory.Exists(imagePath))
                 {
                     Directory.CreateDirectory(imagePath);
@@ -48,7 +45,6 @@ namespace AtlasERP.Controllers
                     }
                 
                 }
-
                 return Ok("La carpeta se ha creado");
             }
             catch (Exception err)
@@ -56,6 +52,40 @@ namespace AtlasERP.Controllers
                 return BadRequest(err);
             }
         }
+
+        [HttpPost]
+        [Route("crearCarpetaFIRMA/{nombre}")]
+        public async Task<IActionResult> crearCarpetaFIRMA([FromForm] IMGmodelClass request, [FromRoute] string nombre)
+        {
+            string fileModelpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+            string assetsPath = Path.Combine(fileModelpath, "storage");
+            string imagePath = Path.Combine(assetsPath, nombre);
+            try
+            {
+                if (!Directory.Exists(assetsPath))
+                {
+                    Directory.CreateDirectory(assetsPath);
+                }
+                if (!Directory.Exists(imagePath))
+                {
+                    Directory.CreateDirectory(imagePath);
+                    // Obtén la ruta completa del archivo en lugar de solo la carpeta
+                    string filePath = Path.Combine(imagePath, request.Archivo.FileName);
+                    using (FileStream newFile = System.IO.File.Create(filePath))
+                    {
+                        await request.Archivo.CopyToAsync(newFile);
+                        await newFile.FlushAsync();
+                    }
+
+                }
+                return Ok("La carpeta se ha creado");
+            }
+            catch (Exception err)
+            {
+                return BadRequest(err);
+            }
+        }
+
 
         [HttpGet]
         [Route("GetImageControl/{route}")]
@@ -133,6 +163,33 @@ namespace AtlasERP.Controllers
 
         [HttpPost("GuardarImagenEntidad")]
         public async Task<IActionResult> GuardarImagenEntidad([FromBody] ImgFile model) {
+            string Sentencia = " exec IMGGeneralControl @centidad, @img, @tipo ";
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(_context.Database
+                                                                        .GetDbConnection()
+                                                                        .ConnectionString)) {
+
+                using (SqlCommand cmd = new SqlCommand(Sentencia, connection)) {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.SelectCommand.CommandType = CommandType.Text;
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@centidad", model.Codentidad));
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@img",      model.Imagen));
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@tipo",     model.Tipo));
+                    adapter.Fill(dt);
+                }  
+
+            }
+
+            if (dt == null) {
+                return NotFound("No se ha podido crear...");
+            }
+
+            return Ok(dt);
+
+        }
+
+        [HttpPost("GuardarImagenEntidadFirma")]
+        public async Task<IActionResult> GuardarImagenEntidadFirma([FromBody] ImgFile model) {
             string Sentencia = " exec IMGGeneralControl @centidad, @img, @tipo ";
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(_context.Database

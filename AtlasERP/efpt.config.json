@@ -183,6 +183,14 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[productos_medicamentos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[punto_de_venta]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[repbodasigna]",
          "ObjectType": 0
       },
@@ -340,6 +348,10 @@
       },
       {
          "Name": "[dbo].[ObtenerCronoMobilTecnico]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerEmpresa]",
          "ObjectType": 1
       },
       {

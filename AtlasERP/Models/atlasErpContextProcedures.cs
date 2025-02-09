@@ -1038,6 +1038,26 @@ namespace AtlasERP.Models
             return _;
         }
 
+        public virtual async Task<List<ObtenerEmpresaResult>> ObtenerEmpresaAsync(OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<ObtenerEmpresaResult>("EXEC @returnValue = [dbo].[ObtenerEmpresa]", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public virtual async Task<List<obtenerGruposMarcasMaqResult>> obtenerGruposMarcasMaqAsync(string codigo, string codMarca, int? tipo, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter

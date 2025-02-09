@@ -41,6 +41,7 @@ namespace AtlasERP.Models
         Task<List<ObtenerContratosResult>> ObtenerContratosAsync(string codcia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerCotizacionResult>> ObtenerCotizacionAsync(int? idTicket, string codcia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerCronoResult>> ObtenerCronoAsync(string ccia, int? anio, int? mes, int? localidad, int? tipo, string userTecnic, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<List<ObtenerEmpresaResult>> ObtenerEmpresaAsync(OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<obtenerGruposMarcasMaqResult>> obtenerGruposMarcasMaqAsync(string codigo, string codMarca, int? tipo, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerItemsBodegasResult>> ObtenerItemsBodegasAsync(int? codbodega, int? state, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerMaquinariaResult>> ObtenerMaquinariaAsync(string codcia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);

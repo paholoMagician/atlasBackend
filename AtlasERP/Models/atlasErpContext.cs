@@ -97,6 +97,10 @@ public partial class atlasErpContext : DbContext
 
     public virtual DbSet<Prodbodegasigna> Prodbodegasignas { get; set; }
 
+    public virtual DbSet<ProductosMedicamento> ProductosMedicamentos { get; set; }
+
+    public virtual DbSet<PuntoDeVentum> PuntoDeVenta { get; set; }
+
     public virtual DbSet<Repbodasigna> Repbodasignas { get; set; }
 
     public virtual DbSet<Repuesto> Repuestos { get; set; }
@@ -1627,6 +1631,167 @@ public partial class atlasErpContext : DbContext
             entity.Property(e => e.Fecrea)
                 .HasColumnType("datetime")
                 .HasColumnName("fecrea");
+        });
+
+        modelBuilder.Entity<ProductosMedicamento>(entity =>
+        {
+            entity.HasKey(e => e.IdMedicamento).HasName("PK_productos_medicamentos2");
+
+            entity.ToTable("productos_medicamentos");
+
+            entity.Property(e => e.IdMedicamento).HasColumnName("id_medicamento");
+            entity.Property(e => e.CantidadStock).HasColumnName("cantidad_stock");
+            entity.Property(e => e.CodigoBarras)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("codigo_barras");
+            entity.Property(e => e.Concentracion)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("concentracion");
+            entity.Property(e => e.Contraindicaciones)
+                .IsUnicode(false)
+                .HasColumnName("contraindicaciones");
+            entity.Property(e => e.EfectosSecundarios)
+                .IsUnicode(false)
+                .HasColumnName("efectos_secundarios");
+            entity.Property(e => e.FechaCaducidad).HasColumnName("fecha_caducidad");
+            entity.Property(e => e.FechaFabricacion).HasColumnName("fecha_fabricacion");
+            entity.Property(e => e.FormaFarmaceutica)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("forma_farmaceutica");
+            entity.Property(e => e.IdPuntoVenta).HasColumnName("id_punto_venta");
+            entity.Property(e => e.ImagenProducto)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("imagen_producto");
+            entity.Property(e => e.Indicaciones)
+                .IsUnicode(false)
+                .HasColumnName("indicaciones");
+            entity.Property(e => e.InstruccionesUso)
+                .IsUnicode(false)
+                .HasColumnName("instrucciones_uso");
+            entity.Property(e => e.LaboratorioFabricante)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("laboratorio_fabricante");
+            entity.Property(e => e.Lote)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("lote");
+            entity.Property(e => e.MinimoStock).HasColumnName("minimo_stock");
+            entity.Property(e => e.Nombre)
+                .IsRequired()
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("nombre");
+            entity.Property(e => e.PaisOrigen)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("pais_origen");
+            entity.Property(e => e.PrecioUnitario)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("precio_unitario");
+            entity.Property(e => e.Presentacion)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("presentacion");
+            entity.Property(e => e.PrincipioActivo)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("principio_activo");
+            entity.Property(e => e.RegistroSanitario)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("registro_sanitario");
+            entity.Property(e => e.RequiereReceta).HasColumnName("requiere_receta");
+            entity.Property(e => e.TemperaturaAlmacenamiento)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("temperatura_almacenamiento");
+            entity.Property(e => e.TipoMedicamento)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("tipo_medicamento");
+            entity.Property(e => e.UbicacionAlmacen)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("ubicacion_almacen");
+            entity.Property(e => e.ViaAdministracion)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("via_administracion");
+        });
+
+        modelBuilder.Entity<PuntoDeVentum>(entity =>
+        {
+            entity.HasKey(e => e.IdPuntoVenta).HasName("PK__punto_de__06416536934F7734");
+
+            entity.ToTable("punto_de_venta");
+
+            entity.Property(e => e.IdPuntoVenta).HasColumnName("id_punto_venta");
+            entity.Property(e => e.Cajon)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("cajon");
+            entity.Property(e => e.CodCanton)
+                .IsRequired()
+                .HasMaxLength(4)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("cod_canton");
+            entity.Property(e => e.CodCia)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("cod_cia");
+            entity.Property(e => e.CodProv)
+                .IsRequired()
+                .HasMaxLength(4)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("cod_prov");
+            entity.Property(e => e.CodUserCargo)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("cod_user_cargo");
+            entity.Property(e => e.CodigoUbicacion)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("codigo_ubicacion");
+            entity.Property(e => e.Direccion)
+                .HasMaxLength(200)
+                .IsUnicode(false)
+                .HasColumnName("direccion");
+            entity.Property(e => e.EmailUserCargo)
+                .HasMaxLength(150)
+                .IsUnicode(false)
+                .HasColumnName("email_user_cargo");
+            entity.Property(e => e.NombrePuntoVenta)
+                .IsRequired()
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("nombre_punto_venta");
+            entity.Property(e => e.NumeroEstante)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("numero_estante");
+            entity.Property(e => e.Pasillo)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("pasillo");
+            entity.Property(e => e.Piso)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("piso");
+            entity.Property(e => e.TelefUserCargo)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("telef_user_cargo");
+            entity.Property(e => e.Telefono)
+                .HasMaxLength(15)
+                .IsUnicode(false)
+                .HasColumnName("telefono");
         });
 
         modelBuilder.Entity<Repbodasigna>(entity =>

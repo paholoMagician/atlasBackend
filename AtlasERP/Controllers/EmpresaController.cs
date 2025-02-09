@@ -19,46 +19,23 @@ namespace AtlasERP.Controllers
             _context = context;
         }
 
-        [HttpPost]
-        [Route("guardarEmpresa")]
-        public async Task<IActionResult> guardarEmpresa([FromBody] Empresa model)
+        [HttpGet("ObtenerEmpresa")]
+        public async Task<IActionResult> ObtenerEmpresa()
         {
-            //var res = _context.Cronograma.Where( x => x.Codcrono == model.Codcrono );
-
-            if (ModelState.IsValid)
-            {
-                _context.Empresas.Add(model);
-                if (await _context.SaveChangesAsync() > 0)
-                {
-                    return Ok(model);
-                }
-                else
-                {
-                    return BadRequest("Datos incorrectos");
-                }
-            }
-            else
-            {
-                return BadRequest("ERROR");
-            }
-        }
-
-
-        [HttpGet("obtenerEmpresa")]
-        public async Task<IActionResult> obtenerEmpresa()
-        {
-
-            string Sentencia = " select * from empresa ";
-
+            string Sentencia = " exec ObtenerEmpresa ";
             DataTable dt = new DataTable();
-            using (SqlConnection connection = new SqlConnection(_context.Database.GetDbConnection().ConnectionString))
+            using (SqlConnection connection = new SqlConnection(_context.Database
+                                                                        .GetDbConnection()
+                                                                        .ConnectionString))
             {
+
                 using (SqlCommand cmd = new SqlCommand(Sentencia, connection))
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.SelectCommand.CommandType = CommandType.Text;
                     adapter.Fill(dt);
                 }
+
             }
 
             if (dt == null)
@@ -69,6 +46,59 @@ namespace AtlasERP.Controllers
             return Ok(dt);
 
         }
+
+
+        [HttpPost]
+        [Route("guardarEmpresa")]
+        public async Task<IActionResult> guardarEmpresa([FromBody] Empresa model)
+        {
+            var rescontext = _context.Empresas.FirstOrDefault(x => x.Codcia == model.Codcia );
+
+            if (rescontext == null)
+            {
+                // guarda
+                if (ModelState.IsValid)
+                {
+                    _context.Empresas.Add(model);
+                    if (await _context.SaveChangesAsync() > 0)
+                    {
+                        return Ok(model);
+                    }
+                    else
+                    {
+                        return BadRequest("Datos incorrectos");
+                    }
+                }
+                else
+                {
+                    return BadRequest("ERROR");
+                }
+            }
+            else
+            {
+                return BadRequest("Ya existe esta empresa");
+            }
+            
+        }
+
+
+        [HttpPut]
+        [Route("EditarEmpresa/{codcia}")]
+        public async Task<IActionResult> EditarEmpresa([FromRoute] string codcia, [FromBody] Empresa model)
+        {
+
+            if (codcia != model.Codcia)
+            {
+                return BadRequest("No existe la garantia");
+            }
+
+            _context.Entry(model).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return Ok(model);
+
+        }
+
+
 
     }
 }

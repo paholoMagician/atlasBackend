@@ -26,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="fileModel\Assets\img1\" />
     <Folder Include="wwwroot\storage\" />
   </ItemGroup>
 
