@@ -1,0 +1,1808 @@
+[
+  {
+    "ContainingType": "AtlasERP.Controllers.fileController.AnyFilesController",
+    "Method": "DescargarArchivo",
+    "RelativePath": "api/AnyFiles/fysicfile/{nombreArchivo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombreArchivo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.AsesorClienteController",
+    "Method": "guardarAsignacionAsesor",
+    "RelativePath": "api/Asesor/guardarAsignacionAsesor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Asesorcliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.AsignacionProvinciasController",
+    "Method": "eliminarTecnicoProvincia",
+    "RelativePath": "api/asignacionProvincias/eliminarTecnicoProvincia/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.AsignacionProvinciasController",
+    "Method": "eliminarTecnicoProvinciaPorUsuario",
+    "RelativePath": "api/asignacionProvincias/eliminarTecnicoProvinciaPorUsuario/{codUser}/{codCia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codUser",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codCia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.AsignacionProvinciasController",
+    "Method": "obtenerTecnicoProvincia",
+    "RelativePath": "api/asignacionProvincias/obtenerTecnicoProvincia/{ccuser}/{ccia}/{type}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ccuser",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ccia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.AsignacionProvinciasController",
+    "Method": "saveAsignacion",
+    "RelativePath": "api/asignacionProvincias/saveAsignacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Asignacionprovincia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ProdBodAsigController",
+    "Method": "eliminarItemBodega",
+    "RelativePath": "api/AsignarProductoBodega/eliminarItemBodega/{codbod}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codbod",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ProdBodAsigController",
+    "Method": "guardarProductoBodega",
+    "RelativePath": "api/AsignarProductoBodega/guardarProductoBodega",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Prodbodegasigna",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ProdBodAsigController",
+    "Method": "obtenerItemsBodega",
+    "RelativePath": "api/AsignarProductoBodega/obtenerItemsBodega/{codbod}/{estado}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codbod",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.BodegasController",
+    "Method": "EditarBodegas",
+    "RelativePath": "api/Bodegas/EditarBodegas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Bodega",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.BodegasController",
+    "Method": "eliminarBodegas",
+    "RelativePath": "api/Bodegas/eliminarBodegas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.BodegasController",
+    "Method": "guardarBodegas",
+    "RelativePath": "api/Bodegas/guardarBodegas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Bodega",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.BodegasController",
+    "Method": "obtenerBodegas",
+    "RelativePath": "api/Bodegas/obtenerBodegas/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ClientesAgenciasController",
+    "Method": "EditarAgencia",
+    "RelativePath": "api/ClienteAgencia/EditarAgencia/{codagencia}/{ccia}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codagencia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ccia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Agencium",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ClientesAgenciasController",
+    "Method": "EditarCliente",
+    "RelativePath": "api/ClienteAgencia/EditarCliente/{codcli}/{ccia}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcli",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ccia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Cliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ClientesAgenciasController",
+    "Method": "eliminarAgencia",
+    "RelativePath": "api/ClienteAgencia/eliminarAgencia/{codagencia}/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codagencia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ClientesAgenciasController",
+    "Method": "eliminarClientes",
+    "RelativePath": "api/ClienteAgencia/eliminarClientes/{codcli}/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcli",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ClientesAgenciasController",
+    "Method": "guardarAgencia",
+    "RelativePath": "api/ClienteAgencia/guardarAgencia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Agencium",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ClientesAgenciasController",
+    "Method": "guardarCliente",
+    "RelativePath": "api/ClienteAgencia/guardarCliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Cliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ClientesAgenciasController",
+    "Method": "obtenerAgencias",
+    "RelativePath": "api/ClienteAgencia/obtenerAgencias/{codcia}/{fil}/{prov}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "fil",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "prov",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ClientesAgenciasController",
+    "Method": "obtenerAgenciasMaquinarias",
+    "RelativePath": "api/ClienteAgencia/obtenerAgenciasMaquinarias/{ccli}/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ccli",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ClientesAgenciasController",
+    "Method": "obtenerClientes",
+    "RelativePath": "api/ClienteAgencia/obtenerClientes/{ccia}/{tp}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ccia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tp",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ContratosController",
+    "Method": "GuardarContratos",
+    "RelativePath": "api/Contratos/GuardarContratos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Contrato",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ContratosController",
+    "Method": "obtenerContratos",
+    "RelativePath": "api/Contratos/obtenerContratos/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.CronogramaController",
+    "Method": "CalculoAsignacionCronograma",
+    "RelativePath": "api/Cronograma/CalculoAsignacionCronograma/{codFecuency}/{codcrono}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codFecuency",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcrono",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.CronogramaController",
+    "Method": "DeleteCronograma",
+    "RelativePath": "api/Cronograma/DeleteCronograma/{codcrono}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcrono",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.CronogramaController",
+    "Method": "EditarCrono",
+    "RelativePath": "api/Cronograma/EditarCrono/{codcrono}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcrono",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Cronograma",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.CronogramaController",
+    "Method": "GuardarCrono",
+    "RelativePath": "api/Cronograma/GuardarCrono",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Cronograma",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.CronogramaController",
+    "Method": "ObtenerCronograma",
+    "RelativePath": "api/Cronograma/ObtenerCronograma/{codcia}/{an}/{me}/{loc}/{tp}/{userTecnic}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "an",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "me",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "loc",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tp",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userTecnic",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.CronogramaController",
+    "Method": "ObtenerCronogramaMobilTecnico",
+    "RelativePath": "api/Cronograma/ObtenerCronogramaMobilTecnico/{ctecnic}/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ctecnic",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.DataMasterController",
+    "Method": "GetDataMaster",
+    "RelativePath": "api/DataMaster/GetDataMaster/{mast}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mast",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.DataMasterController",
+    "Method": "ObtenerDatamasterGrupo",
+    "RelativePath": "api/DataMaster/ObtenerDatamasterGrupo/{grupo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "grupo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.DataMasterController",
+    "Method": "ObtenerDatamasterSubGrupos",
+    "RelativePath": "api/DataMaster/ObtenerDatamasterSubGrupos/{grupo}/{sgrupo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "grupo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sgrupo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.EmpresaController",
+    "Method": "EditarEmpresa",
+    "RelativePath": "api/Empresa/EditarEmpresa/{codcia}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Empresa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.EmpresaController",
+    "Method": "guardarEmpresa",
+    "RelativePath": "api/Empresa/guardarEmpresa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Empresa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.EmpresaController",
+    "Method": "ObtenerEmpresa",
+    "RelativePath": "api/Empresa/ObtenerEmpresa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.GarantiasController",
+    "Method": "EditarGarantia",
+    "RelativePath": "api/Garantias/EditarGarantia/{codgarantia}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codgarantia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Garantia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.GarantiasController",
+    "Method": "GuardarGarantias",
+    "RelativePath": "api/Garantias/GuardarGarantias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Garantia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.GarantiasController",
+    "Method": "obtenerGarantias",
+    "RelativePath": "api/Garantias/obtenerGarantias/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ImagenController",
+    "Method": "crearCarpeta",
+    "RelativePath": "api/Imagen/crearCarpeta/{nombre}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Archivo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ImagenController",
+    "Method": "crearCarpetaFIRMA",
+    "RelativePath": "api/Imagen/crearCarpetaFIRMA/{nombre}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Archivo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ImagenController",
+    "Method": "EditarImagen",
+    "RelativePath": "api/Imagen/EditarImagen/{codbinding}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codbinding",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.ImgFile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ImagenController",
+    "Method": "GetImageControl",
+    "RelativePath": "api/Imagen/GetImageControl/{route}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "route",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ImagenController",
+    "Method": "GuardarImagenEntidad",
+    "RelativePath": "api/Imagen/GuardarImagenEntidad",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.ImgFile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ImagenController",
+    "Method": "GuardarImagenEntidadFirma",
+    "RelativePath": "api/Imagen/GuardarImagenEntidadFirma",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.ImgFile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ImagenController",
+    "Method": "obtenerImagen",
+    "RelativePath": "api/Imagen/obtenerImagen/{cbinding}/{tp}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cbinding",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tp",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ImagenController",
+    "Method": "saveImagen",
+    "RelativePath": "api/Imagen/saveImagen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.ImgFile",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.LocalidadController",
+    "Method": "MainLocalidad",
+    "RelativePath": "api/localidad/MainLocalidad",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.loginController",
+    "Method": "Login",
+    "RelativePath": "api/login/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userInfo",
+        "Type": "AtlasERP.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MantenimientoController",
+    "Method": "eliminarMantenimiento",
+    "RelativePath": "api/Mantenimiento/eliminarMantenimiento/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MantenimientoController",
+    "Method": "guardarMantenimiento",
+    "RelativePath": "api/Mantenimiento/guardarMantenimiento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Mantemaqcro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MantenimientoController",
+    "Method": "ObtenerMantenimientoCrono",
+    "RelativePath": "api/Mantenimiento/ObtenerMantenimientoCrono/{cagencia}/{m}/{a}/{l}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cagencia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "m",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "a",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "l",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.AsignacionMaquinariaAgenciaController",
+    "Method": "elimianarAsignacionmaquinacliente",
+    "RelativePath": "api/MaquinaAgencia/elimianarAsignacionmaquinacliente/{cprod}/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cprod",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.AsignacionMaquinariaAgenciaController",
+    "Method": "GuardarMaquinaAgencia",
+    "RelativePath": "api/MaquinaAgencia/GuardarMaquinaAgencia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Asignacionmaquinacliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.AsignacionMaquinariaAgenciaController",
+    "Method": "obtenerAsignacionmaquinacliente",
+    "RelativePath": "api/MaquinaAgencia/obtenerAsignacionmaquinacliente/{cagencia}/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cagencia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MaquinariaController",
+    "Method": "EditarMaquinaria",
+    "RelativePath": "api/Maquinaria/EditarMaquinaria/{codmaquina}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codmaquina",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Maquinarium",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MaquinariaController",
+    "Method": "eliminarMaquinaria",
+    "RelativePath": "api/Maquinaria/eliminarMaquinaria/{codmaquina}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codmaquina",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MaquinariaController",
+    "Method": "GuardarImagenProductos",
+    "RelativePath": "api/Maquinaria/GuardarImagenProductos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Controllers.fileController.IMGProd",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MaquinariaController",
+    "Method": "GuardarMaquinaria",
+    "RelativePath": "api/Maquinaria/GuardarMaquinaria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Maquinarium",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MaquinariaController",
+    "Method": "obtenerMaquinaria",
+    "RelativePath": "api/Maquinaria/obtenerMaquinaria/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MaquinariaController",
+    "Method": "obtenerMaquinariaHistorico",
+    "RelativePath": "api/Maquinaria/obtenerMaquinariaHistorico/{codmaquina}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codmaquina",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MaquinariaController",
+    "Method": "obtenerMaquinariaIMG",
+    "RelativePath": "api/Maquinaria/obtenerMaquinariaIMG",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MaquinariaController",
+    "Method": "ObtenerMaquinasSinBodega",
+    "RelativePath": "api/Maquinaria/ObtenerMaquinasSinBodega/{codcia}/{option}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.MaquinariaController",
+    "Method": "ObtenerMaquinaUnit",
+    "RelativePath": "api/Maquinaria/ObtenerMaquinaUnit/{tpmaq}/{mar}/{mod}/{tip}/{codmaquina}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tpmaq",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "mar",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "mod",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tip",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "codmaquina",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ModuloController",
+    "Method": "EditarPermisosModulos",
+    "RelativePath": "api/modulos/EditarPermisosModulos/{permmod}/{codmod}/{userCod}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "permmod",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codmod",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "userCod",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ModuloController",
+    "Method": "GetModulos",
+    "RelativePath": "api/modulos/GetModulos/{userCod}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCod",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
+    "Method": "guardarPuntosDeVenta",
+    "RelativePath": "api/PuntosDeVenta/guardarPuntosDeVenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.PuntoDeVentum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaEstantesController",
+    "Method": "guardarPuntosDeVentaEstantes",
+    "RelativePath": "api/PuntosDeVentaEstantes/guardarPuntosDeVentaEstantes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.PuntoDeVentaEstante",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ProdRepAsignaController",
+    "Method": "GuardarRepbodasigna",
+    "RelativePath": "api/Repbodasigna/GuardarRepbodasigna",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Repbodasigna",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.RepuestosController",
+    "Method": "EditarMarcaRepuestos",
+    "RelativePath": "api/Repuestos/EditarMarcaRepuestos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.MarcaRepuesto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.RepuestosController",
+    "Method": "EditarRepuestos",
+    "RelativePath": "api/Repuestos/EditarRepuestos/{codrep}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codrep",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Repuesto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.RepuestosController",
+    "Method": "DeleteMarcaRepuestos",
+    "RelativePath": "api/Repuestos/EliminarMarcaRepuestos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.RepuestosController",
+    "Method": "eliminarRepuestos",
+    "RelativePath": "api/Repuestos/eliminarRepuestos/{usc}/{codrep}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usc",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codrep",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.RepuestosController",
+    "Method": "GuardarMarcaRepuestos",
+    "RelativePath": "api/Repuestos/GuardarMarcaRepuestos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.MarcaRepuesto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.RepuestosController",
+    "Method": "guardarRepuestos",
+    "RelativePath": "api/Repuestos/guardarRepuestos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Repuesto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.RepuestosController",
+    "Method": "ObtenerMarcaRepuetos",
+    "RelativePath": "api/Repuestos/ObtenerMarcaRepuetos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.RepuestosController",
+    "Method": "ObtenerModeloMarcaRepuetos",
+    "RelativePath": "api/Repuestos/ObtenerModeloMarcaRepuetos/{idMarcaRep}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idMarcaRep",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.RepuestosController",
+    "Method": "obtenerRepuestos",
+    "RelativePath": "api/Repuestos/obtenerRepuestos/{usc}/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usc",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.UserController",
+    "Method": "CrearCuentas",
+    "RelativePath": "api/User/CrearCuentas/{userCod}/{ccia}/{tcuenta}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCod",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ccia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tcuenta",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.UserController",
+    "Method": "CrearCuentasHelpDesk",
+    "RelativePath": "api/User/CrearCuentasHelpDesk/{codCliente}/{codCia}/{R}/{Nombre}/{Apellido}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codCliente",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codCia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "R",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Apellido",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.UserController",
+    "Method": "EditarUsuario",
+    "RelativePath": "api/User/EditarUsuario/{coduser}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "coduser",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.UserController",
+    "Method": "eliminarUsuario",
+    "RelativePath": "api/User/eliminarUsuario/{userCod}/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCod",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.UserController",
+    "Method": "GetUser",
+    "RelativePath": "api/User/GetUser/{userCod}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCod",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.UserController",
+    "Method": "guardarUsuario",
+    "RelativePath": "api/User/guardarUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.UserController",
+    "Method": "ObtenerCuentaUsuario",
+    "RelativePath": "api/User/ObtenerCuentaUsuario/{coduser}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "coduser",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.UserController",
+    "Method": "ObtenerTecniCrono",
+    "RelativePath": "api/User/ObtenerTecniCrono/{idlocalidad}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idlocalidad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.UserController",
+    "Method": "ObtenerUsuariosExec",
+    "RelativePath": "api/User/ObtenerUsuariosExec/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.VersionamientoController",
+    "Method": "obtenerVersionamiento",
+    "RelativePath": "api/versionamiento/obtenerVersionamiento/{version}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "version",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.VersionamientoController",
+    "Method": "obtenerVersionCMS",
+    "RelativePath": "api/versionamiento/obtenerVersionCMS",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ZonificacionController",
+    "Method": "ActualizarAgenciaEstado",
+    "RelativePath": "api/Zonificacion/ActualizarAgenciaEstado/{estado}/{cAgencia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estado",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cAgencia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ZonificacionController",
+    "Method": "eliminarDataCardinal",
+    "RelativePath": "api/Zonificacion/eliminarDataCardinal/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ZonificacionController",
+    "Method": "guardarZonificacion",
+    "RelativePath": "api/Zonificacion/guardarZonificacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Cardinal",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ZonificacionController",
+    "Method": "ObtenerAgenciasGeneral",
+    "RelativePath": "api/Zonificacion/ObtenerAgenciasGeneral/{codcia}/{ccli}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ccli",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ZonificacionController",
+    "Method": "ObtenerAgenciasLocalidad",
+    "RelativePath": "api/Zonificacion/ObtenerAgenciasLocalidad/{codlocal}/{codzone}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codlocal",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "codzone",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ZonificacionController",
+    "Method": "ObtenerAgenciaZonificada",
+    "RelativePath": "api/Zonificacion/ObtenerAgenciaZonificada/{codzone}/{codcli}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codzone",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "codcli",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[AtlasERP.WeatherForecast, AtlasERP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

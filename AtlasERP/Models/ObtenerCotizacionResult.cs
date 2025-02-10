@@ -12,13 +12,11 @@ namespace AtlasERP.Models
         public int? idRequer { get; set; }
         public int? estado { get; set; }
         public int? cantidad { get; set; }
-        [Column("valorFinal", TypeName = "decimal(10,2)")]
         public decimal? valorFinal { get; set; }
         public string nombreEmpresa { get; set; }
         public string telf1 { get; set; }
         public string telf2 { get; set; }
         public string email { get; set; }
-        [Column("iva", TypeName = "decimal(10,2)")]
         public decimal? iva { get; set; }
         public string descripcionEmpresa { get; set; }
         public string direccion { get; set; }

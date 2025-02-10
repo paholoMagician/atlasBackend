@@ -19,21 +19,9 @@ public partial class PuntoDeVentum
 
     public string Telefono { get; set; }
 
-    public string NumeroEstante { get; set; }
-
-    public string Piso { get; set; }
-
-    public string Cajon { get; set; }
-
-    public string Pasillo { get; set; }
-
-    public string CodigoUbicacion { get; set; }
-
-    public string CodUserCargo { get; set; }
-
-    public string TelefUserCargo { get; set; }
-
-    public string EmailUserCargo { get; set; }
-
     public string CodCia { get; set; }
+
+    public DateTime Fecrea { get; set; }
+
+    public string Usercrea { get; set; }
 }

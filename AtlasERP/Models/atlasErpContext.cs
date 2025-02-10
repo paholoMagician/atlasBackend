@@ -99,6 +99,8 @@ public partial class atlasErpContext : DbContext
 
     public virtual DbSet<ProductosMedicamento> ProductosMedicamentos { get; set; }
 
+    public virtual DbSet<PuntoDeVentaEstante> PuntoDeVentaEstantes { get; set; }
+
     public virtual DbSet<PuntoDeVentum> PuntoDeVenta { get; set; }
 
     public virtual DbSet<Repbodasigna> Repbodasignas { get; set; }
@@ -757,7 +759,7 @@ public partial class atlasErpContext : DbContext
 
         modelBuilder.Entity<DimDate>(entity =>
         {
-            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E303C71F62");
+            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3209DBCD4");
 
             entity.ToTable("DimDate");
 
@@ -1724,19 +1726,45 @@ public partial class atlasErpContext : DbContext
                 .HasColumnName("via_administracion");
         });
 
+        modelBuilder.Entity<PuntoDeVentaEstante>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_punto_de_venta_estantes2");
+
+            entity.ToTable("punto_de_venta_estantes");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.CajonesEstante).HasColumnName("cajones_estante");
+            entity.Property(e => e.CodigoPrefijo)
+                .HasMaxLength(4)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("codigo_prefijo");
+            entity.Property(e => e.ColumnasEstantes).HasColumnName("columnas_estantes");
+            entity.Property(e => e.Fecrea)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("fecrea");
+            entity.Property(e => e.IdPuntoVenta).HasColumnName("id_punto_venta");
+            entity.Property(e => e.NumeroEstantesPiso).HasColumnName("numero_estantes_piso");
+            entity.Property(e => e.PisosEstantes).HasColumnName("pisos_estantes");
+            entity.Property(e => e.TagDescription)
+                .HasMaxLength(300)
+                .IsUnicode(false)
+                .HasColumnName("tag_description");
+            entity.Property(e => e.Usercrea)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("usercrea");
+        });
+
         modelBuilder.Entity<PuntoDeVentum>(entity =>
         {
-            entity.HasKey(e => e.IdPuntoVenta).HasName("PK__punto_de__06416536934F7734");
+            entity.HasKey(e => e.IdPuntoVenta).HasName("PK_punto_de_venta3");
 
             entity.ToTable("punto_de_venta");
 
             entity.Property(e => e.IdPuntoVenta).HasColumnName("id_punto_venta");
-            entity.Property(e => e.Cajon)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("cajon");
             entity.Property(e => e.CodCanton)
-                .IsRequired()
                 .HasMaxLength(4)
                 .IsUnicode(false)
                 .IsFixedLength()
@@ -1746,52 +1774,30 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("cod_cia");
             entity.Property(e => e.CodProv)
-                .IsRequired()
                 .HasMaxLength(4)
                 .IsUnicode(false)
                 .IsFixedLength()
                 .HasColumnName("cod_prov");
-            entity.Property(e => e.CodUserCargo)
-                .HasMaxLength(30)
-                .IsUnicode(false)
-                .HasColumnName("cod_user_cargo");
-            entity.Property(e => e.CodigoUbicacion)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("codigo_ubicacion");
             entity.Property(e => e.Direccion)
                 .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("direccion");
-            entity.Property(e => e.EmailUserCargo)
-                .HasMaxLength(150)
-                .IsUnicode(false)
-                .HasColumnName("email_user_cargo");
+            entity.Property(e => e.Fecrea)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("fecrea");
             entity.Property(e => e.NombrePuntoVenta)
-                .IsRequired()
                 .HasMaxLength(100)
                 .IsUnicode(false)
                 .HasColumnName("nombre_punto_venta");
-            entity.Property(e => e.NumeroEstante)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("numero_estante");
-            entity.Property(e => e.Pasillo)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("pasillo");
-            entity.Property(e => e.Piso)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("piso");
-            entity.Property(e => e.TelefUserCargo)
-                .HasMaxLength(30)
-                .IsUnicode(false)
-                .HasColumnName("telef_user_cargo");
             entity.Property(e => e.Telefono)
                 .HasMaxLength(15)
                 .IsUnicode(false)
                 .HasColumnName("telefono");
+            entity.Property(e => e.Usercrea)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("usercrea");
         });
 
         modelBuilder.Entity<Repbodasigna>(entity =>
@@ -2310,6 +2316,7 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false);
         });
 
+        OnModelCreatingGeneratedProcedures(modelBuilder);
         OnModelCreatingGeneratedFunctions(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
     }

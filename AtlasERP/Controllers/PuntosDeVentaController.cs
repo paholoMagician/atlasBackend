@@ -25,7 +25,30 @@ namespace AtlasERP.Controllers
                 _context.PuntoDeVenta.Add(model);
                 if (await _context.SaveChangesAsync() > 0)
                 {
-                    var res = _context.PuntoDeVenta.FirstOrDefault(x => x.NombrePuntoVenta == model.NombrePuntoVenta);
+                    var res = (from pv in _context.PuntoDeVenta
+                               join mt1 in _context.MasterTables on pv.CodProv equals mt1.Codigo into provJoin
+                               from mt1 in provJoin.DefaultIfEmpty()
+                               join mt2 in _context.MasterTables on new { codigo = pv.CodCanton, master = pv.CodProv } equals new { codigo = mt2.Codigo, master = mt2.Master } into cantonJoin
+                               from mt2 in cantonJoin.DefaultIfEmpty()
+                               join us in _context.Usuarios on pv.Usercrea equals us.Coduser into userJoin
+                               from us in userJoin.DefaultIfEmpty()
+                               where pv.NombrePuntoVenta == model.NombrePuntoVenta
+                               select new
+                               {
+                                   id_punto_venta = pv.IdPuntoVenta,
+                                   nombre_punto_venta = pv.NombrePuntoVenta,
+                                   cod_prov = pv.CodProv,
+                                   cod_canton = pv.CodCanton,
+                                   pv.Direccion,
+                                   pv.Telefono,
+                                   cod_cia = pv.CodCia,
+                                   fecrea = pv.Fecrea,
+                                   usercrea = pv.Usercrea,
+                                   nombreProvincia = mt1.Nombre,
+                                   nombreCanton = mt2.Nombre,
+                                   nUsuario = us.Nombre + " " + us.Apellido
+                               }).FirstOrDefault();
+
                     return Ok(res);
                 }
                 else
