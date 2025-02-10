@@ -25,7 +25,8 @@ namespace AtlasERP.Controllers
                 _context.PuntoDeVenta.Add(model);
                 if (await _context.SaveChangesAsync() > 0)
                 {
-                    return Ok(model);
+                    var res = _context.PuntoDeVenta.FirstOrDefault(x => x.NombrePuntoVenta == model.NombrePuntoVenta);
+                    return Ok(res);
                 }
                 else
                 {
