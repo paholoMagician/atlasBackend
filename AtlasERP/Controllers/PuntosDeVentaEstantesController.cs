@@ -1,6 +1,7 @@
 ﻿using AtlasERP.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AtlasERP.Controllers
 {
@@ -15,6 +16,7 @@ namespace AtlasERP.Controllers
         {
             _context = context;
         }
+
 
         [HttpPost]
         [Route("guardarPuntosDeVentaEstantes")]
