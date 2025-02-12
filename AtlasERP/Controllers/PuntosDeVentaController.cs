@@ -17,13 +17,27 @@ namespace AtlasERP.Controllers
             _context = context;
         }
 
+        [HttpDelete("EliminarPuntoDeVenta/{id}")]
+        public IActionResult EliminarPuntoDeVenta([FromRoute] int id)
+        {
+            
+            var delete = _context.PuntoDeVenta
+                          .Where(b => b.Id.Equals(id))
+                          .ExecuteDelete();
+
+            return (delete != 0) ? Ok() : BadRequest();
+
+        }
+
 
         [HttpPut]
         [Route("EditarPuntosDeVenta/{id}")]
         public async Task<IActionResult> EditarPuntosDeVenta([FromRoute] int id, [FromBody] PuntoDeVentum model)
-        {
+        {   
+            Console.WriteLine(model.Id);
+            Console.WriteLine(id);
 
-            if (id != model.IdPuntoVenta)
+            if (id != model.Id)
             {
                 return BadRequest("No existe el usuario");
             }
@@ -49,7 +63,7 @@ namespace AtlasERP.Controllers
                        where pv.CodCia == ccia
                        select new
                        {
-                           id_punto_venta = pv.IdPuntoVenta,
+                           id = pv.Id,
                            nombre_punto_venta = pv.NombrePuntoVenta,
                            cod_prov = pv.CodProv,
                            cod_canton = pv.CodCanton,
@@ -92,7 +106,7 @@ namespace AtlasERP.Controllers
                                where pv.NombrePuntoVenta == model.NombrePuntoVenta
                                select new
                                {
-                                   id_punto_venta = pv.IdPuntoVenta,
+                                   pv.Id,
                                    nombre_punto_venta = pv.NombrePuntoVenta,
                                    cod_prov = pv.CodProv,
                                    cod_canton = pv.CodCanton,

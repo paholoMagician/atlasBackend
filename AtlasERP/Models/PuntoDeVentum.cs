@@ -7,7 +7,7 @@ namespace AtlasERP.Models;
 
 public partial class PuntoDeVentum
 {
-    public int IdPuntoVenta { get; set; }
+    public int Id { get; set; }
 
     public string NombrePuntoVenta { get; set; }
 
