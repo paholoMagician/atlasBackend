@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\controllers\\modulosestantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\controllers\\modulosestantescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\controllers\\bodegascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\controllers\\bodegascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\models\\atlaserpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\models\\atlaserpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\controllers\\puntosdeventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\controllers\\puntosdeventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,30 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModulosEstantesController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\ModulosEstantesController.cs",
+              "RelativeDocumentMoniker": "AtlasERP\\Controllers\\ModulosEstantesController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\ModulosEstantesController.cs",
+              "RelativeToolTip": "AtlasERP\\Controllers\\ModulosEstantesController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC4AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T18:19:01.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "atlasErpContext.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Models\\atlasErpContext.cs",
+              "RelativeDocumentMoniker": "AtlasERP\\Models\\atlasErpContext.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Models\\atlasErpContext.cs",
+              "RelativeToolTip": "AtlasERP\\Models\\atlasErpContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T18:18:25.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Program.cs",
+              "RelativeDocumentMoniker": "AtlasERP\\Program.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Program.cs",
+              "RelativeToolTip": "AtlasERP\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAD4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T17:06:24.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\appsettings.json",
+              "RelativeDocumentMoniker": "AtlasERP\\appsettings.json",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\appsettings.json",
+              "RelativeToolTip": "AtlasERP\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-14T17:03:29.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BodegasController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\BodegasController.cs",
+              "RelativeDocumentMoniker": "AtlasERP\\Controllers\\BodegasController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\BodegasController.cs",
+              "RelativeToolTip": "AtlasERP\\Controllers\\BodegasController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T02:51:58.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "PuntosDeVentaEstantesController.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\PuntosDeVentaEstantesController.cs",
               "RelativeDocumentMoniker": "AtlasERP\\Controllers\\PuntosDeVentaEstantesController.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\PuntosDeVentaEstantesController.cs",
               "RelativeToolTip": "AtlasERP\\Controllers\\PuntosDeVentaEstantesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowC0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T16:56:51.886Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "PuntosDeVentaController.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\PuntosDeVentaController.cs",
               "RelativeDocumentMoniker": "AtlasERP\\Controllers\\PuntosDeVentaController.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\PuntosDeVentaController.cs",
               "RelativeToolTip": "AtlasERP\\Controllers\\PuntosDeVentaController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAIwFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-09T03:36:06.1Z",
               "EditorCaption": ""

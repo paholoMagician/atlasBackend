@@ -24,4 +24,6 @@ public partial class PuntoDeVentaEstante
     public string CodigoPrefijo { get; set; }
 
     public int? ColumnasEstantes { get; set; }
+
+    public string TokenId { get; set; }
 }

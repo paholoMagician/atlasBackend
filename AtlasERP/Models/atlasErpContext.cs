@@ -95,6 +95,8 @@ public partial class atlasErpContext : DbContext
 
     public virtual DbSet<Modulo> Modulos { get; set; }
 
+    public virtual DbSet<ModulosEstante> ModulosEstantes { get; set; }
+
     public virtual DbSet<Prodbodegasigna> Prodbodegasignas { get; set; }
 
     public virtual DbSet<ProductosMedicamento> ProductosMedicamentos { get; set; }
@@ -759,7 +761,7 @@ public partial class atlasErpContext : DbContext
 
         modelBuilder.Entity<DimDate>(entity =>
         {
-            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3B6713AE3");
+            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3CA2F15AA");
 
             entity.ToTable("DimDate");
 
@@ -1608,6 +1610,25 @@ public partial class atlasErpContext : DbContext
                 .HasColumnName("moduleName");
         });
 
+        modelBuilder.Entity<ModulosEstante>(entity =>
+        {
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.CodecUbicacion)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("codecUbicacion");
+            entity.Property(e => e.Description)
+                .HasMaxLength(500)
+                .IsUnicode(false)
+                .HasColumnName("description");
+            entity.Property(e => e.Estado).HasColumnName("estado");
+            entity.Property(e => e.IdEstante).HasColumnName("idEstante");
+            entity.Property(e => e.TokenId)
+                .HasMaxLength(15)
+                .IsUnicode(false)
+                .HasColumnName("tokenId");
+        });
+
         modelBuilder.Entity<Prodbodegasigna>(entity =>
         {
             entity.HasKey(e => e.Codmaquinariabodega).HasName("PK_prodbodegasigna1_1");
@@ -1748,6 +1769,10 @@ public partial class atlasErpContext : DbContext
                 .HasMaxLength(500)
                 .IsUnicode(false)
                 .HasColumnName("tagDescription");
+            entity.Property(e => e.TokenId)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("tokenId");
             entity.Property(e => e.Usercrea)
                 .HasMaxLength(30)
                 .IsUnicode(false)
@@ -2313,6 +2338,7 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false);
         });
 
+        OnModelCreatingGeneratedProcedures(modelBuilder);
         OnModelCreatingGeneratedFunctions(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
     }

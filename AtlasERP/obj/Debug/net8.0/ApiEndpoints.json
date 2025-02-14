@@ -1253,6 +1253,75 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AtlasERP.Controllers.ModulosEstantesController",
+    "Method": "GuardarModulosEstantes",
+    "RelativePath": "api/ModulosEstantes/GuardarModulosEstantes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.ModulosEstante",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ModulosEstantesController",
+    "Method": "obtenerModulosEstantes",
+    "RelativePath": "api/ModulosEstantes/obtenerModulosEstantes/{idE}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idE",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
+    "Method": "EditarPuntosDeVenta",
+    "RelativePath": "api/PuntosDeVenta/EditarPuntosDeVenta/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.PuntoDeVentum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
+    "Method": "EliminarPuntoDeVenta",
+    "RelativePath": "api/PuntosDeVenta/EliminarPuntoDeVenta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
     "Method": "guardarPuntosDeVenta",
     "RelativePath": "api/PuntosDeVenta/guardarPuntosDeVenta",
@@ -1269,6 +1338,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
+    "Method": "ObtenerPuntosDeVenta",
+    "RelativePath": "api/PuntosDeVenta/ObtenerPuntosDeVenta/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AtlasERP.Controllers.PuntosDeVentaEstantesController",
     "Method": "guardarPuntosDeVentaEstantes",
     "RelativePath": "api/PuntosDeVentaEstantes/guardarPuntosDeVentaEstantes",
@@ -1279,6 +1364,22 @@
       {
         "Name": "model",
         "Type": "AtlasERP.Models.PuntoDeVentaEstante",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaEstantesController",
+    "Method": "ObtenerEstantesPuntosDeVenta",
+    "RelativePath": "api/PuntosDeVentaEstantes/ObtenerEstantesPuntosDeVenta/{idPv}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPv",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

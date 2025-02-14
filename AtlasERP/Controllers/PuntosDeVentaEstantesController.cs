@@ -56,11 +56,7 @@ namespace AtlasERP.Controllers
                 {
                     return NotFound("No se encontraron estantes para el punto de venta especificado.");
                 }
-
-                // Si tienes un DTO, puedes mapear los resultados aquí
-                // var estantesDto = estantes.Select(e => new EstanteDto { ... }).ToList();
-
-                return Ok(estantes); // O devuelve estantesDto si usas DTOs
+                return Ok(estantes);
             }
             catch (Exception ex)
             {
