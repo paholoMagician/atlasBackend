@@ -19,8 +19,6 @@ public partial class PuntoDeVentaEstante
 
     public string TagDescription { get; set; }
 
-    public int? NumeroEstantesPiso { get; set; }
-
     public int? IdPuntoVenta { get; set; }
 
     public string CodigoPrefijo { get; set; }

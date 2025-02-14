@@ -1,7 +1,9 @@
 ﻿using AtlasERP.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace AtlasERP.Controllers
 {
@@ -49,43 +51,72 @@ namespace AtlasERP.Controllers
         }
 
 
-        [HttpGet]
-        [Route("ObtenerPuntosDeVenta/{ccia}")]
-        public IActionResult ObtenerPuntosDeVenta([FromRoute] string ccia)
+        [HttpGet("ObtenerPuntosDeVenta/{codcia}")]
+        public async Task<IActionResult> ObtenerPuntosDeVenta([FromRoute] string codcia)
         {
-            var res = (from pv in _context.PuntoDeVenta
-                       join mt1 in _context.MasterTables on pv.CodProv equals mt1.Codigo into provJoin
-                       from mt1 in provJoin.Where(m => m.Master == "PRV00").DefaultIfEmpty() // Filtro para master = "PRV00"
-                       join mt2 in _context.MasterTables on new { codigo = pv.CodCanton, master = pv.CodProv } equals new { codigo = mt2.Codigo, master = mt2.Master } into cantonJoin
-                       from mt2 in cantonJoin.DefaultIfEmpty()
-                       join us in _context.Usuarios on pv.Usercrea equals us.Coduser into userJoin
-                       from us in userJoin.DefaultIfEmpty()
-                       where pv.CodCia == ccia
-                       select new
-                       {
-                           id = pv.Id,
-                           nombre_punto_venta = pv.NombrePuntoVenta,
-                           cod_prov = pv.CodProv,
-                           cod_canton = pv.CodCanton,
-                           pv.Direccion,
-                           pv.Telefono,
-                           cod_cia = pv.CodCia,
-                           fecrea = pv.Fecrea,
-                           usercrea = pv.Usercrea,
-                           nombreProvincia = mt1.Nombre,
-                           nombreCanton = mt2.Nombre,
-                           nUsuario = us.Nombre + " " + us.Apellido
-                       }).ToList();
 
-            if (res.Any())
+            string Sentencia = " exec ObtenerPuntosDeVenta @ccia ";
+
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(_context.Database.GetDbConnection().ConnectionString))
             {
-                return Ok(res);
+                using (SqlCommand cmd = new SqlCommand(Sentencia, connection))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.SelectCommand.CommandType = CommandType.Text;
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@ccia", codcia));
+                    adapter.Fill(dt);
+                }
             }
-            else
+
+            if (dt == null)
             {
-                return NotFound("No existen datos para la compañía proporcionada.");
+                return NotFound("No se ha podido crear...");
             }
+
+            return Ok(dt);
+
         }
+
+
+
+        //[HttpGet]
+        //[Route("ObtenerPuntosDeVenta/{ccia}")]
+        //public IActionResult ObtenerPuntosDeVenta([FromRoute] string ccia)
+        //{
+        //    var res = (from pv in _context.PuntoDeVenta
+        //               join mt1 in _context.MasterTables on pv.CodProv equals mt1.Codigo into provJoin
+        //               from mt1 in provJoin.Where(m => m.Master == "PRV00").DefaultIfEmpty() // Filtro para master = "PRV00"
+        //               join mt2 in _context.MasterTables on new { codigo = pv.CodCanton, master = pv.CodProv } equals new { codigo = mt2.Codigo, master = mt2.Master } into cantonJoin
+        //               from mt2 in cantonJoin.DefaultIfEmpty()
+        //               join us in _context.Usuarios on pv.Usercrea equals us.Coduser into userJoin
+        //               from us in userJoin.DefaultIfEmpty()
+        //               where pv.CodCia == ccia
+        //               select new
+        //               {
+        //                   id = pv.Id,
+        //                   nombre_punto_venta = pv.NombrePuntoVenta,
+        //                   cod_prov = pv.CodProv,
+        //                   cod_canton = pv.CodCanton,
+        //                   pv.Direccion,
+        //                   pv.Telefono,
+        //                   cod_cia = pv.CodCia,
+        //                   fecrea = pv.Fecrea,
+        //                   usercrea = pv.Usercrea,
+        //                   nombreProvincia = mt1.Nombre,
+        //                   nombreCanton = mt2.Nombre,
+        //                   nUsuario = us.Nombre + " " + us.Apellido
+        //               }).ToList();
+
+        //    if (res.Any())
+        //    {
+        //        return Ok(res);
+        //    }
+        //    else
+        //    {
+        //        return NotFound("No existen datos para la compañía proporcionada.");
+        //    }
+        //}
 
         [HttpPost]
         [Route("guardarPuntosDeVenta")]

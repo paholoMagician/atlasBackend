@@ -35,5 +35,39 @@ namespace AtlasERP.Controllers
             }
         }
 
+
+        [HttpGet]
+        [Route("ObtenerEstantesPuntosDeVenta/{idPv}")]
+        public IActionResult ObtenerEstantesPuntosDeVenta([FromRoute] int idPv)
+        {
+            if (idPv <= 0)
+            {
+                return BadRequest("El ID del punto de venta no es válido.");
+            }
+
+            try
+            {
+                var estantes = _context.PuntoDeVentaEstantes
+                    .Where(x => x.IdPuntoVenta == idPv)
+                    .AsNoTracking()
+                    .ToList();
+
+                if (estantes == null || !estantes.Any())
+                {
+                    return NotFound("No se encontraron estantes para el punto de venta especificado.");
+                }
+
+                // Si tienes un DTO, puedes mapear los resultados aquí
+                // var estantesDto = estantes.Select(e => new EstanteDto { ... }).ToList();
+
+                return Ok(estantes); // O devuelve estantesDto si usas DTOs
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) aquí
+                return StatusCode(500, "Ocurrió un error interno al procesar la solicitud.");
+            }
+        }
+
     }
 }

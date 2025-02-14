@@ -1743,7 +1743,6 @@ public partial class atlasErpContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("fecrea");
             entity.Property(e => e.IdPuntoVenta).HasColumnName("idPuntoVenta");
-            entity.Property(e => e.NumeroEstantesPiso).HasColumnName("numeroEstantesPiso");
             entity.Property(e => e.PisosEstantes).HasColumnName("pisosEstantes");
             entity.Property(e => e.TagDescription)
                 .HasMaxLength(500)
