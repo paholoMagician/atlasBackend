@@ -24,10 +24,11 @@ namespace AtlasERP.Controllers
         {
             var resultado = await _context.MasterTables
                 .Where(m => m.Master == mast)
-                .GroupBy(m => new { m.Master, m.Codigo, m.Nombre })
+                .GroupBy(m => new { m.Master, m.Codigo, m.Nombre, m.Nomtag })
                 .Select(g => new
                 {
                     Master = g.Key.Master.Trim(),
+                    nomTag = g.Key.Nomtag.Trim(),
                     Codigo = g.Key.Codigo.Trim(),
                     Nombre = g.Key.Nombre.Trim()
                 })

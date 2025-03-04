@@ -54,7 +54,7 @@ namespace AtlasERP.Controllers
 
                 if (estantes == null || !estantes.Any())
                 {
-                    return NotFound("No se encontraron estantes para el punto de venta especificado.");
+                    return Ok("No se encontraron estantes para el punto de venta especificado.");
                 }
                 return Ok(estantes);
             }

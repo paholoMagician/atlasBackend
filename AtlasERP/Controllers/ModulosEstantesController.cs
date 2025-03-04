@@ -49,7 +49,7 @@ namespace AtlasERP.Controllers
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(_context.Database.GetDbConnection().ConnectionString))
             {
-                using (SqlCommand cmd = new SqlCommand(Sentencia, connection))
+                using (SqlCommand cmd = new SqlCommand(Sentencia, connection)) 
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.SelectCommand.CommandType = CommandType.Text;
@@ -66,6 +66,23 @@ namespace AtlasERP.Controllers
             return Ok(dt);
 
         }
+
+        [HttpPut]
+        [Route("EditarModulosEstantes/{id}")]
+        public async Task<IActionResult> EditarModulosEstantes([FromRoute] int id, [FromBody] ModulosEstante model)
+        {
+            
+            if (id != model.Id)
+            {
+                return BadRequest("No existe el modulos estante");
+            }
+
+            _context.Entry(model).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return Ok(model);
+
+        }
+
 
     }
 }

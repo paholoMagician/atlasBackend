@@ -44,6 +44,7 @@ namespace AtlasERP.Models
         public string nombreTipoRequerimiento { get; set; }
         public DateTime fechaActual { get; set; }
         public int? horasRestantes { get; set; }
+        [Column("valor", TypeName = "decimal(10,2)")]
         public decimal? valor { get; set; }
         public string observacion { get; set; }
     }

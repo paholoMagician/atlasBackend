@@ -9,7 +9,9 @@ public partial class ModulosEstante
 {
     public int Id { get; set; }
 
-    public string CodecUbicacion { get; set; }
+    public string Row { get; set; }
+
+    public string Col { get; set; }
 
     public string Description { get; set; }
 

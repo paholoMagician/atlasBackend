@@ -60,4 +60,24 @@ public partial class ProductosMedicamento
     public int? IdPuntoVenta { get; set; }
 
     public string InstruccionesUso { get; set; }
+
+    public decimal? ValorBlister { get; set; }
+
+    public decimal? ValorCaja { get; set; }
+
+    public string Observacion { get; set; }
+
+    public decimal? PrecioCompra { get; set; }
+
+    public decimal? Descuento { get; set; }
+
+    public decimal? OImp { get; set; }
+
+    public decimal? ContNeto { get; set; }
+
+    public DateTime FecRegistroSistema { get; set; }
+
+    public string UserRegister { get; set; }
+
+    public string UnidadMedida { get; set; }
 }
