@@ -5431,23 +5431,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pahol\\.nuget\\packages\\": {},
+    "C:\\Users\\USUARIO\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\AtlasERP.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\AtlasERP.csproj",
       "projectName": "AtlasERP",
-      "projectPath": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\AtlasERP.csproj",
-      "packagesPath": "C:\\Users\\pahol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\obj\\",
+      "projectPath": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\AtlasERP.csproj",
+      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\pahol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5538,7 +5538,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

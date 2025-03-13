@@ -791,6 +791,27 @@
   },
   {
     "ContainingType": "AtlasERP.Controllers.ImagenController",
+    "Method": "crearCarpetaImagenProd",
+    "RelativePath": "api/Imagen/crearCarpetaImagenProd/{nombre}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Archivo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ImagenController",
     "Method": "EditarImagen",
     "RelativePath": "api/Imagen/EditarImagen/{codbinding}",
     "HttpMethod": "PUT",
@@ -1254,6 +1275,27 @@
   },
   {
     "ContainingType": "AtlasERP.Controllers.ModulosEstantesController",
+    "Method": "EditarModulosEstantes",
+    "RelativePath": "api/ModulosEstantes/EditarModulosEstantes/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.ModulosEstante",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ModulosEstantesController",
     "Method": "GuardarModulosEstantes",
     "RelativePath": "api/ModulosEstantes/GuardarModulosEstantes",
     "HttpMethod": "POST",
@@ -1278,6 +1320,70 @@
     "Parameters": [
       {
         "Name": "idE",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ProductosMedicamentosController",
+    "Method": "EditarProductosMedicamentos",
+    "RelativePath": "api/ProductosMedicamentos/EditarProductosMedicamentos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.ProductosMedicamento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ProductosMedicamentosController",
+    "Method": "EliminarProductosMedicamentos",
+    "RelativePath": "api/ProductosMedicamentos/EliminarProductosMedicamentos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ProductosMedicamentosController",
+    "Method": "GuardarProductosMEdicamentos",
+    "RelativePath": "api/ProductosMedicamentos/GuardarProductosMEdicamentos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.ProductosMedicamento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ProductosMedicamentosController",
+    "Method": "ObtenerMedicamentos",
+    "RelativePath": "api/ProductosMedicamentos/ObtenerMedicamentos/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
         "Type": "System.String",
         "IsRequired": true
       }

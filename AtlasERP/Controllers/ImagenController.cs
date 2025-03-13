@@ -91,7 +91,7 @@ namespace AtlasERP.Controllers
                     await newFile.FlushAsync();
                 }
 
-                return Ok("La carpeta y la imagen se han creado correctamente.");
+                return Ok();
             }
             catch (Exception err)
             {
