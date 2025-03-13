@@ -27,9 +27,9 @@ public partial class ProductosMedicamento
 
     public string Lote { get; set; }
 
-    public DateOnly? FechaFabricacion { get; set; }
+    public DateTime FechaFabricacion { get; set; }
 
-    public DateOnly? FechaCaducidad { get; set; }
+    public DateTime FechaCaducidad { get; set; }
 
     public string TipoMedicamento { get; set; }
 
@@ -80,4 +80,8 @@ public partial class ProductosMedicamento
     public string UserRegister { get; set; }
 
     public string UnidadMedida { get; set; }
+
+    public string Codcia { get; set; }
+
+    public string Categoria { get; set; }
 }

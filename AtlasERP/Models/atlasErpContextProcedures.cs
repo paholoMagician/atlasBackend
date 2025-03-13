@@ -1244,6 +1244,33 @@ namespace AtlasERP.Models
             return _;
         }
 
+        public virtual async Task<List<ObtenerMedicamentosResult>> ObtenerMedicamentosAsync(string codcia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "codcia",
+                    Size = 30,
+                    Value = codcia ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<ObtenerMedicamentosResult>("EXEC @returnValue = [dbo].[ObtenerMedicamentos] @codcia = @codcia", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public virtual async Task<List<ObtenerMensajesResult>> ObtenerMensajesAsync(string codUser, int? tipo, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -1649,6 +1676,284 @@ namespace AtlasERP.Models
                 parameterreturnValue,
             };
             var _ = await _context.SqlQueryAsync<ReporteTecnicoCorrectivoResult>("EXEC @returnValue = [dbo].[ReporteTecnicoCorrectivo] @idTicket = @idTicket", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
+        public virtual async Task<int> sp_ActualizarProductoMedicamentoAsync(int? idProducto, string nombre, string principioActivo, string concentracion, string formaFarmaceutica, string presentacion, string laboratorioFabricante, string paisOrigen, string registroSanitario, string lote, DateTime? fechaFabricacion, DateTime? fechaCaducidad, string tipoMedicamento, string viaAdministracion, string indicaciones, string contraindicaciones, string efectosSecundarios, int? cantidadStock, string ubicacionAlmacen, string temperaturaAlmacenamiento, int? minimoStock, decimal? precioUnitario, bool? requiereReceta, string codigoBarras, string imagenProducto, int? idPuntoVenta, string instruccionesUso, decimal? valorBlister, decimal? valorCaja, string observacion, decimal? precioCompra, decimal? descuento, decimal? oImp, decimal? contNeto, DateTime? fecRegistroSistema, string userRegister, string unidadMedida, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "idProducto",
+                    Value = idProducto ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "nombre",
+                    Size = 100,
+                    Value = nombre ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "principioActivo",
+                    Size = 100,
+                    Value = principioActivo ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "concentracion",
+                    Size = 300,
+                    Value = concentracion ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "formaFarmaceutica",
+                    Size = 200,
+                    Value = formaFarmaceutica ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "presentacion",
+                    Size = 100,
+                    Value = presentacion ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "laboratorioFabricante",
+                    Size = 100,
+                    Value = laboratorioFabricante ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "paisOrigen",
+                    Size = 50,
+                    Value = paisOrigen ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "registroSanitario",
+                    Size = 50,
+                    Value = registroSanitario ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "lote",
+                    Size = 50,
+                    Value = lote ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "fechaFabricacion",
+                    Value = fechaFabricacion ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.DateTime,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "fechaCaducidad",
+                    Value = fechaCaducidad ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.DateTime,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "tipoMedicamento",
+                    Size = 50,
+                    Value = tipoMedicamento ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "viaAdministracion",
+                    Size = 50,
+                    Value = viaAdministracion ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "indicaciones",
+                    Size = -1,
+                    Value = indicaciones ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "contraindicaciones",
+                    Size = -1,
+                    Value = contraindicaciones ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "efectosSecundarios",
+                    Size = -1,
+                    Value = efectosSecundarios ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "cantidadStock",
+                    Value = cantidadStock ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "ubicacionAlmacen",
+                    Size = 100,
+                    Value = ubicacionAlmacen ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "temperaturaAlmacenamiento",
+                    Size = 50,
+                    Value = temperaturaAlmacenamiento ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "minimoStock",
+                    Value = minimoStock ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "precioUnitario",
+                    Precision = 10,
+                    Scale = 2,
+                    Value = precioUnitario ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Decimal,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "requiereReceta",
+                    Value = requiereReceta ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Bit,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "codigoBarras",
+                    Size = 50,
+                    Value = codigoBarras ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "imagenProducto",
+                    Size = 255,
+                    Value = imagenProducto ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "idPuntoVenta",
+                    Value = idPuntoVenta ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "instruccionesUso",
+                    Size = -1,
+                    Value = instruccionesUso ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "valorBlister",
+                    Precision = 10,
+                    Scale = 2,
+                    Value = valorBlister ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Decimal,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "valorCaja",
+                    Precision = 10,
+                    Scale = 2,
+                    Value = valorCaja ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Decimal,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "observacion",
+                    Size = 300,
+                    Value = observacion ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "precioCompra",
+                    Precision = 10,
+                    Scale = 2,
+                    Value = precioCompra ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Decimal,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "descuento",
+                    Precision = 10,
+                    Scale = 2,
+                    Value = descuento ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Decimal,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "oImp",
+                    Precision = 10,
+                    Scale = 2,
+                    Value = oImp ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Decimal,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "contNeto",
+                    Precision = 10,
+                    Scale = 2,
+                    Value = contNeto ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Decimal,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "fecRegistroSistema",
+                    Value = fecRegistroSistema ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.DateTime,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "userRegister",
+                    Size = 30,
+                    Value = userRegister ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "unidadMedida",
+                    Size = 3,
+                    Value = unidadMedida ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Char,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.Database.ExecuteSqlRawAsync("EXEC @returnValue = [dbo].[sp_ActualizarProductoMedicamento] @idProducto = @idProducto, @nombre = @nombre, @principioActivo = @principioActivo, @concentracion = @concentracion, @formaFarmaceutica = @formaFarmaceutica, @presentacion = @presentacion, @laboratorioFabricante = @laboratorioFabricante, @paisOrigen = @paisOrigen, @registroSanitario = @registroSanitario, @lote = @lote, @fechaFabricacion = @fechaFabricacion, @fechaCaducidad = @fechaCaducidad, @tipoMedicamento = @tipoMedicamento, @viaAdministracion = @viaAdministracion, @indicaciones = @indicaciones, @contraindicaciones = @contraindicaciones, @efectosSecundarios = @efectosSecundarios, @cantidadStock = @cantidadStock, @ubicacionAlmacen = @ubicacionAlmacen, @temperaturaAlmacenamiento = @temperaturaAlmacenamiento, @minimoStock = @minimoStock, @precioUnitario = @precioUnitario, @requiereReceta = @requiereReceta, @codigoBarras = @codigoBarras, @imagenProducto = @imagenProducto, @idPuntoVenta = @idPuntoVenta, @instruccionesUso = @instruccionesUso, @valorBlister = @valorBlister, @valorCaja = @valorCaja, @observacion = @observacion, @precioCompra = @precioCompra, @descuento = @descuento, @oImp = @oImp, @contNeto = @contNeto, @fecRegistroSistema = @fecRegistroSistema, @userRegister = @userRegister, @unidadMedida = @unidadMedida", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 

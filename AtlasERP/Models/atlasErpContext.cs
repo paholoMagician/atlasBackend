@@ -1666,16 +1666,25 @@ public partial class atlasErpContext : DbContext
 
         modelBuilder.Entity<ProductosMedicamento>(entity =>
         {
-            entity.HasKey(e => e.IdMedicamento).HasName("PK_productos_medicamentos_1");
+            entity.HasKey(e => e.IdMedicamento).HasName("PK_productos_medicamentos1_1");
 
             entity.ToTable("productos_medicamentos");
 
-            entity.Property(e => e.IdMedicamento).HasColumnName("id_medicamento");
-            entity.Property(e => e.CantidadStock).HasColumnName("cantidad_stock");
+            entity.Property(e => e.IdMedicamento).HasColumnName("idMedicamento");
+            entity.Property(e => e.CantidadStock).HasColumnName("cantidadStock");
+            entity.Property(e => e.Categoria)
+                .HasMaxLength(3)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("categoria");
+            entity.Property(e => e.Codcia)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("codcia");
             entity.Property(e => e.CodigoBarras)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("codigo_barras");
+                .HasColumnName("codigoBarras");
             entity.Property(e => e.Concentracion)
                 .HasMaxLength(300)
                 .IsUnicode(false)
@@ -1691,37 +1700,41 @@ public partial class atlasErpContext : DbContext
                 .HasColumnName("descuento");
             entity.Property(e => e.EfectosSecundarios)
                 .IsUnicode(false)
-                .HasColumnName("efectos_secundarios");
+                .HasColumnName("efectosSecundarios");
             entity.Property(e => e.FecRegistroSistema)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("fecRegistroSistema");
-            entity.Property(e => e.FechaCaducidad).HasColumnName("fecha_caducidad");
-            entity.Property(e => e.FechaFabricacion).HasColumnName("fecha_fabricacion");
+            entity.Property(e => e.FechaCaducidad)
+                .HasColumnType("datetime")
+                .HasColumnName("fechaCaducidad");
+            entity.Property(e => e.FechaFabricacion)
+                .HasColumnType("datetime")
+                .HasColumnName("fechaFabricacion");
             entity.Property(e => e.FormaFarmaceutica)
                 .HasMaxLength(200)
                 .IsUnicode(false)
-                .HasColumnName("forma_farmaceutica");
-            entity.Property(e => e.IdPuntoVenta).HasColumnName("id_punto_venta");
+                .HasColumnName("formaFarmaceutica");
+            entity.Property(e => e.IdPuntoVenta).HasColumnName("idPuntoVenta");
             entity.Property(e => e.ImagenProducto)
                 .HasMaxLength(255)
                 .IsUnicode(false)
-                .HasColumnName("imagen_producto");
+                .HasColumnName("imagenProducto");
             entity.Property(e => e.Indicaciones)
                 .IsUnicode(false)
                 .HasColumnName("indicaciones");
             entity.Property(e => e.InstruccionesUso)
                 .IsUnicode(false)
-                .HasColumnName("instrucciones_uso");
+                .HasColumnName("instruccionesUso");
             entity.Property(e => e.LaboratorioFabricante)
                 .HasMaxLength(100)
                 .IsUnicode(false)
-                .HasColumnName("laboratorio_fabricante");
+                .HasColumnName("laboratorioFabricante");
             entity.Property(e => e.Lote)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("lote");
-            entity.Property(e => e.MinimoStock).HasColumnName("minimo_stock");
+            entity.Property(e => e.MinimoStock).HasColumnName("minimoStock");
             entity.Property(e => e.Nombre)
                 .IsRequired()
                 .HasMaxLength(100)
@@ -1737,13 +1750,13 @@ public partial class atlasErpContext : DbContext
             entity.Property(e => e.PaisOrigen)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("pais_origen");
+                .HasColumnName("paisOrigen");
             entity.Property(e => e.PrecioCompra)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("precioCompra");
             entity.Property(e => e.PrecioUnitario)
                 .HasColumnType("decimal(10, 2)")
-                .HasColumnName("precio_unitario");
+                .HasColumnName("precioUnitario");
             entity.Property(e => e.Presentacion)
                 .HasMaxLength(100)
                 .IsUnicode(false)
@@ -1751,24 +1764,24 @@ public partial class atlasErpContext : DbContext
             entity.Property(e => e.PrincipioActivo)
                 .HasMaxLength(100)
                 .IsUnicode(false)
-                .HasColumnName("principio_activo");
+                .HasColumnName("principioActivo");
             entity.Property(e => e.RegistroSanitario)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("registro_sanitario");
-            entity.Property(e => e.RequiereReceta).HasColumnName("requiere_receta");
+                .HasColumnName("registroSanitario");
+            entity.Property(e => e.RequiereReceta).HasColumnName("requiereReceta");
             entity.Property(e => e.TemperaturaAlmacenamiento)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("temperatura_almacenamiento");
+                .HasColumnName("temperaturaAlmacenamiento");
             entity.Property(e => e.TipoMedicamento)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("tipo_medicamento");
+                .HasColumnName("tipoMedicamento");
             entity.Property(e => e.UbicacionAlmacen)
                 .HasMaxLength(100)
                 .IsUnicode(false)
-                .HasColumnName("ubicacion_almacen");
+                .HasColumnName("ubicacionAlmacen");
             entity.Property(e => e.UnidadMedida)
                 .HasMaxLength(3)
                 .IsUnicode(false)
@@ -1787,7 +1800,7 @@ public partial class atlasErpContext : DbContext
             entity.Property(e => e.ViaAdministracion)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("via_administracion");
+                .HasColumnName("viaAdministracion");
         });
 
         modelBuilder.Entity<PuntoDeVentaEstante>(entity =>

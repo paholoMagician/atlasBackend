@@ -47,6 +47,7 @@ namespace AtlasERP.Models
         Task<List<ObtenerMaquinariaResult>> ObtenerMaquinariaAsync(string codcia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerMaquinasSinBodegaResult>> ObtenerMaquinasSinBodegaAsync(string codcia, int? option, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerMaquinaUnitResult>> ObtenerMaquinaUnitAsync(string tpm, string mc, string mod, int? tp, string codmaq, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<List<ObtenerMedicamentosResult>> ObtenerMedicamentosAsync(string codcia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerMensajesResult>> ObtenerMensajesAsync(string codUser, int? tipo, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerMensajesTIcketResult>> ObtenerMensajesTIcketAsync(int? idRequerimiento, int? top, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerModulosEstantesResult>> ObtenerModulosEstantesAsync(int? idEstante, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
@@ -60,6 +61,7 @@ namespace AtlasERP.Models
         Task<int> ProcesoTransdferenciaBodAsync(string codprod, int? state, string codusercrea, int? boden, int? bodsal, string ccia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ReporteMantenimientoResult>> ReporteMantenimientoAsync(string tipoentidad, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ReporteTecnicoCorrectivoResult>> ReporteTecnicoCorrectivoAsync(int? idTicket, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<int> sp_ActualizarProductoMedicamentoAsync(int? idProducto, string nombre, string principioActivo, string concentracion, string formaFarmaceutica, string presentacion, string laboratorioFabricante, string paisOrigen, string registroSanitario, string lote, DateTime? fechaFabricacion, DateTime? fechaCaducidad, string tipoMedicamento, string viaAdministracion, string indicaciones, string contraindicaciones, string efectosSecundarios, int? cantidadStock, string ubicacionAlmacen, string temperaturaAlmacenamiento, int? minimoStock, decimal? precioUnitario, bool? requiereReceta, string codigoBarras, string imagenProducto, int? idPuntoVenta, string instruccionesUso, decimal? valorBlister, decimal? valorCaja, string observacion, decimal? precioCompra, decimal? descuento, decimal? oImp, decimal? contNeto, DateTime? fecRegistroSistema, string userRegister, string unidadMedida, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<int> UpdateEstadoModuloAsync(int? permiso, string idmod, string coduser, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
     }
 }

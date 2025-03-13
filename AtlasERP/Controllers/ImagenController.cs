@@ -54,6 +54,52 @@ namespace AtlasERP.Controllers
         }
 
         [HttpPost]
+        [Route("crearCarpetaImagenProd/{nombre}")]
+        public async Task<IActionResult> crearCarpetaImagenProd([FromForm] IMGmodelClass request, [FromRoute] string nombre)
+        {
+            // Ruta base
+            string fileModelpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+            string assetsPath = Path.Combine(fileModelpath, "storage");
+            string imagenesProductosPath = Path.Combine(assetsPath, "imagenesProductos");
+            string imagePath = Path.Combine(imagenesProductosPath, nombre);
+
+            try
+            {
+                // Crear la carpeta "storage" si no existe
+                if (!Directory.Exists(assetsPath))
+                {
+                    Directory.CreateDirectory(assetsPath);
+                }
+
+                // Crear la carpeta "imagenesProductos" si no existe
+                if (!Directory.Exists(imagenesProductosPath))
+                {
+                    Directory.CreateDirectory(imagenesProductosPath);
+                }
+
+                // Crear la carpeta con el nombre proporcionado
+                if (!Directory.Exists(imagePath))
+                {
+                    Directory.CreateDirectory(imagePath);
+                }
+
+                // Guardar la imagen en la carpeta creada
+                string filePath = Path.Combine(imagePath, request.Archivo.FileName);
+                using (FileStream newFile = System.IO.File.Create(filePath))
+                {
+                    await request.Archivo.CopyToAsync(newFile);
+                    await newFile.FlushAsync();
+                }
+
+                return Ok("La carpeta y la imagen se han creado correctamente.");
+            }
+            catch (Exception err)
+            {
+                return BadRequest(err.Message);
+            }
+        }
+
+        [HttpPost]
         [Route("crearCarpetaFIRMA/{nombre}")]
         public async Task<IActionResult> crearCarpetaFIRMA([FromForm] IMGmodelClass request, [FromRoute] string nombre)
         {

@@ -387,6 +387,10 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[ObtenerMedicamentos]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[ObtenerMensajes]",
          "ObjectType": 1
       },
@@ -444,6 +448,10 @@
       },
       {
          "Name": "[dbo].[ReporteTecnicoCorrectivo]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_ActualizarProductoMedicamento]",
          "ObjectType": 1
       },
       {
