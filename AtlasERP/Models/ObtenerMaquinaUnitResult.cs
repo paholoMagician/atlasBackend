@@ -22,13 +22,9 @@ namespace AtlasERP.Models
         public int? contadorinicial { get; set; }
         public int? contadorfinal { get; set; }
         public int? estado { get; set; }
-        [Column("vidautil", TypeName = "decimal(10,2)")]
         public decimal? vidautil { get; set; }
-        [Column("valorCompra", TypeName = "decimal(10,2)")]
         public decimal? valorCompra { get; set; }
-        [Column("porcentajeVenta", TypeName = "decimal(10,2)")]
         public decimal? porcentajeVenta { get; set; }
-        [Column("desccuentoAplicable", TypeName = "decimal(10,2)")]
         public decimal? desccuentoAplicable { get; set; }
     }
 }

@@ -11,9 +11,7 @@ namespace AtlasERP.Models
         public DateOnly? fechaconsumo { get; set; }
         public string api { get; set; }
         public string method { get; set; }
-        [Column("MBconsumidos", TypeName = "decimal(38,10)")]
         public decimal? MBconsumidos { get; set; }
-        [Column("segundos", TypeName = "decimal(23,8)")]
         public decimal? segundos { get; set; }
     }
 }

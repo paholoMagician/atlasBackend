@@ -16,7 +16,6 @@ namespace AtlasERP.Models
         public string codcia { get; set; }
         public int? cantidad { get; set; }
         public string precioUnitario { get; set; }
-        [Column("valorFinal", TypeName = "decimal(10,2)")]
         public decimal? valorFinal { get; set; }
         public string nombreUsuario { get; set; }
         public string nombreRep { get; set; }

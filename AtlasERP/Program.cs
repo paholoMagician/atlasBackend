@@ -62,6 +62,7 @@ app.UseCors(builder => builder.WithOrigins(
     "http://localhost:2255",
     "http://localhost:2256",
     "http://localhost:2257",
+    "http://192.168.55.34:2250",
     "http://192.168.55.242:2255",
     "http://192.168.55.236:2251",
     "http://192.168.55.28:2251")

@@ -21,11 +21,11 @@ namespace AtlasERP.Controllers
         }
 
 
-        [HttpGet("ObtenerMedicamentos/{codcia}")]
-        public async Task<IActionResult> ObtenerMedicamentos([FromRoute] string codcia)
+        [HttpGet("ObtenerMedicamentos/{codcia}/{type}")]
+        public async Task<IActionResult> ObtenerMedicamentos([FromRoute] string codcia, [FromRoute] int type )
         {
 
-            string Sentencia = " exec ObtenerMedicamentos @ccia ";
+            string Sentencia = " exec ObtenerMedicamentos @ccia, @tp ";
 
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(_context.Database.GetDbConnection().ConnectionString))
@@ -35,6 +35,7 @@ namespace AtlasERP.Controllers
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.SelectCommand.CommandType = CommandType.Text;
                     adapter.SelectCommand.Parameters.Add(new SqlParameter("@ccia", codcia));
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@tp", type));
                     adapter.Fill(dt);
                 }
             }

@@ -18,19 +18,12 @@ namespace AtlasERP.Models
         public string modelo { get; set; }
         public bool? activo { get; set; }
         public string codTipoMaquina { get; set; }
-        [Column("valorCompra", TypeName = "decimal(10,2)")]
         public decimal? valorCompra { get; set; }
-        [Column("porcentajeVenta", TypeName = "decimal(10,2)")]
         public decimal? porcentajeVenta { get; set; }
-        [Column("desccuentoAplicable", TypeName = "decimal(10,2)")]
         public decimal? desccuentoAplicable { get; set; }
-        [Column("iva", TypeName = "decimal(10,2)")]
         public decimal? iva { get; set; }
-        [Column("pvp", TypeName = "decimal(27,8)")]
         public decimal? pvp { get; set; }
-        [Column("IVAvalor", TypeName = "decimal(38,10)")]
         public decimal? IVAvalor { get; set; }
-        [Column("pvpIVA", TypeName = "decimal(38,10)")]
         public decimal? pvpIVA { get; set; }
         public int? idMarcaRepuesto { get; set; }
         public int? estado { get; set; }

@@ -48,12 +48,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\download.jpeg\download.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\bg\bg.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\472544041_923479163263864_7772628533330511877_n.jpg\472544041_923479163263864_7772628533330511877_n.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>AtlasERP</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AtlasERP</BasePath>
-      <RelativePath>storage/imagenesProductos/bg/bg.jpg</RelativePath>
+      <RelativePath>storage/imagenesProductos/472544041_923479163263864_7772628533330511877_n.jpg/472544041_923479163263864_7772628533330511877_n.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -62,14 +62,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\bg\bg.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\472544041_923479163263864_7772628533330511877_n.jpg\472544041_923479163263864_7772628533330511877_n.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\Clobesol L.A\472544041_923479163263864_7772628533330511877_n.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\474688285_927821479478430_8827890991493839555_n.jpg\474688285_927821479478430_8827890991493839555_n.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>AtlasERP</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AtlasERP</BasePath>
-      <RelativePath>storage/imagenesProductos/Clobesol L.A/472544041_923479163263864_7772628533330511877_n.jpg</RelativePath>
+      <RelativePath>storage/imagenesProductos/474688285_927821479478430_8827890991493839555_n.jpg/474688285_927821479478430_8827890991493839555_n.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -78,14 +78,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\Clobesol L.A\472544041_923479163263864_7772628533330511877_n.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\474688285_927821479478430_8827890991493839555_n.jpg\474688285_927821479478430_8827890991493839555_n.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\Clobesol L.A\475166995_1029147905910757_2849489084923798088_n.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\images.jpeg\images.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>AtlasERP</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AtlasERP</BasePath>
-      <RelativePath>storage/imagenesProductos/Clobesol L.A/475166995_1029147905910757_2849489084923798088_n.jpg</RelativePath>
+      <RelativePath>storage/imagenesProductos/images.jpeg/images.jpeg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -94,55 +94,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\Clobesol L.A\475166995_1029147905910757_2849489084923798088_n.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\nombreDeLaCarpeta\472544041_923479163263864_7772628533330511877_n.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>AtlasERP</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AtlasERP</BasePath>
-      <RelativePath>storage/imagenesProductos/nombreDeLaCarpeta/472544041_923479163263864_7772628533330511877_n.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\nombreDeLaCarpeta\472544041_923479163263864_7772628533330511877_n.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\nombreDeLaCarpeta\475166995_1029147905910757_2849489084923798088_n.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>AtlasERP</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AtlasERP</BasePath>
-      <RelativePath>storage/imagenesProductos/nombreDeLaCarpeta/475166995_1029147905910757_2849489084923798088_n.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\nombreDeLaCarpeta\475166995_1029147905910757_2849489084923798088_n.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\pastilla de prueba\474688285_927821479478430_8827890991493839555_n.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>AtlasERP</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AtlasERP</BasePath>
-      <RelativePath>storage/imagenesProductos/pastilla de prueba/474688285_927821479478430_8827890991493839555_n.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\pastilla de prueba\474688285_927821479478430_8827890991493839555_n.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\imagenesProductos\images.jpeg\images.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\images.jpeg\images.jpeg))">
       <SourceType>Package</SourceType>

@@ -1377,7 +1377,7 @@
   {
     "ContainingType": "AtlasERP.Controllers.ProductosMedicamentosController",
     "Method": "ObtenerMedicamentos",
-    "RelativePath": "api/ProductosMedicamentos/ObtenerMedicamentos/{codcia}",
+    "RelativePath": "api/ProductosMedicamentos/ObtenerMedicamentos/{codcia}/{type}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -1385,6 +1385,11 @@
       {
         "Name": "codcia",
         "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -1837,6 +1842,38 @@
     "ContainingType": "AtlasERP.Controllers.UserController",
     "Method": "ObtenerUsuariosExec",
     "RelativePath": "api/User/ObtenerUsuariosExec/{codcia}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codcia",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.VentasPosController",
+    "Method": "guardarVentasPos",
+    "RelativePath": "api/ventasPos/guardarVentasPos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Ventaspo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.VentasPosController",
+    "Method": "obtenerVentasPos",
+    "RelativePath": "api/ventasPos/obtenerVentasPos/{codcia}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

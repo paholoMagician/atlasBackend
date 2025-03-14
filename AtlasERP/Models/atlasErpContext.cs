@@ -119,6 +119,8 @@ public partial class atlasErpContext : DbContext
 
     public virtual DbSet<UsuarioPortalTicket> UsuarioPortalTickets { get; set; }
 
+    public virtual DbSet<Ventaspo> Ventaspos { get; set; }
+
     public virtual DbSet<VersionCm> VersionCms { get; set; }
 
     public virtual DbSet<Versionamiento> Versionamientos { get; set; }
@@ -761,7 +763,7 @@ public partial class atlasErpContext : DbContext
 
         modelBuilder.Entity<DimDate>(entity =>
         {
-            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3A5B64331");
+            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3C846FE26");
 
             entity.ToTable("DimDate");
 
@@ -2331,6 +2333,43 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<Ventaspo>(entity =>
+        {
+            entity.ToTable("ventaspos");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Ccia)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("ccia");
+            entity.Property(e => e.CodMetodoPago)
+                .HasMaxLength(3)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("codMetodoPago");
+            entity.Property(e => e.Estado).HasColumnName("estado");
+            entity.Property(e => e.Feccrea)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("feccrea");
+            entity.Property(e => e.IdPuntoVenta).HasColumnName("idPuntoVenta");
+            entity.Property(e => e.Idprod).HasColumnName("idprod");
+            entity.Property(e => e.Observacion)
+                .HasMaxLength(300)
+                .IsUnicode(false)
+                .HasColumnName("observacion");
+            entity.Property(e => e.Subtotal)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("subtotal");
+            entity.Property(e => e.TotalIva)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("totalIva");
+            entity.Property(e => e.Usercrea)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("usercrea");
+        });
+
         modelBuilder.Entity<VersionCm>(entity =>
         {
             entity.HasKey(e => e.Version);
@@ -2394,6 +2433,7 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false);
         });
 
+        OnModelCreatingGeneratedProcedures(modelBuilder);
         OnModelCreatingGeneratedFunctions(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
     }
