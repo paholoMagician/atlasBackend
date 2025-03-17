@@ -119,7 +119,9 @@ public partial class atlasErpContext : DbContext
 
     public virtual DbSet<UsuarioPortalTicket> UsuarioPortalTickets { get; set; }
 
-    public virtual DbSet<Ventaspo> Ventaspos { get; set; }
+    public virtual DbSet<VentasposCab> VentasposCabs { get; set; }
+
+    public virtual DbSet<VentasposDet> VentasposDets { get; set; }
 
     public virtual DbSet<VersionCm> VersionCms { get; set; }
 
@@ -763,7 +765,7 @@ public partial class atlasErpContext : DbContext
 
         modelBuilder.Entity<DimDate>(entity =>
         {
-            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3C846FE26");
+            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E33AA39505");
 
             entity.ToTable("DimDate");
 
@@ -852,6 +854,11 @@ public partial class atlasErpContext : DbContext
                 .HasMaxLength(750)
                 .IsUnicode(false)
                 .HasColumnName("textoCotizacion");
+            entity.Property(e => e.TypeCia)
+                .HasMaxLength(4)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("typeCia");
             entity.Property(e => e.Website1)
                 .HasMaxLength(200)
                 .IsUnicode(false)
@@ -2333,9 +2340,11 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<Ventaspo>(entity =>
+        modelBuilder.Entity<VentasposCab>(entity =>
         {
-            entity.ToTable("ventaspos");
+            entity.HasKey(e => e.Id).HasName("PK_ventaspos");
+
+            entity.ToTable("ventasposCab");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Ccia)
@@ -2347,13 +2356,16 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false)
                 .IsFixedLength()
                 .HasColumnName("codMetodoPago");
+            entity.Property(e => e.Codcli)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("codcli");
             entity.Property(e => e.Estado).HasColumnName("estado");
             entity.Property(e => e.Feccrea)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("feccrea");
             entity.Property(e => e.IdPuntoVenta).HasColumnName("idPuntoVenta");
-            entity.Property(e => e.Idprod).HasColumnName("idprod");
             entity.Property(e => e.Observacion)
                 .HasMaxLength(300)
                 .IsUnicode(false)
@@ -2368,6 +2380,22 @@ public partial class atlasErpContext : DbContext
                 .HasMaxLength(30)
                 .IsUnicode(false)
                 .HasColumnName("usercrea");
+        });
+
+        modelBuilder.Entity<VentasposDet>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_ventasposDet1_1");
+
+            entity.ToTable("ventasposDet");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Cantidad).HasColumnName("cantidad");
+            entity.Property(e => e.Codprod).HasColumnName("codprod");
+            entity.Property(e => e.Estado).HasColumnName("estado");
+            entity.Property(e => e.IdCab).HasColumnName("idCab");
+            entity.Property(e => e.Pvp)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("pvp");
         });
 
         modelBuilder.Entity<VersionCm>(entity =>
@@ -2433,7 +2461,6 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false);
         });
 
-        OnModelCreatingGeneratedProcedures(modelBuilder);
         OnModelCreatingGeneratedFunctions(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
     }

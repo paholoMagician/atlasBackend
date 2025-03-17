@@ -16,10 +16,13 @@ namespace AtlasERP.Models
         public string telf2 { get; set; }
         public string provincia { get; set; }
         public string canton { get; set; }
+        [Column("iva", TypeName = "decimal(10,2)")]
         public decimal? iva { get; set; }
+        [Column("oIimp", TypeName = "decimal(10,2)")]
         public decimal? oIimp { get; set; }
         public string logotipoUrl { get; set; }
         public string slogan { get; set; }
+        public string typeCia { get; set; }
         public string textoCotizacion { get; set; }
         public string nombrePersCargo { get; set; }
         public string cargo { get; set; }

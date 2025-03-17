@@ -34,5 +34,5 @@ namespace AtlasERP.Controllers.fileController
             return NotFound("Ruta: " + rutaArchivo);
         }
 
-    }
+    }  
 }

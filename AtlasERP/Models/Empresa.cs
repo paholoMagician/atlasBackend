@@ -46,4 +46,6 @@ public partial class Empresa
     public string Website2 { get; set; }
 
     public string FirmaRepLegal { get; set; }
+
+    public string TypeCia { get; set; }
 }

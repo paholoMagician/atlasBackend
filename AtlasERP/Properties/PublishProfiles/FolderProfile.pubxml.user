@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\pahol\Desktop\publicAtlasErp</_PublishTargetUrl>
+    <History>True|2025-03-17T02:58:49.3961878Z||;True|2025-03-16T21:58:27.2600598-05:00||;True|2025-03-16T18:43:13.3113532-05:00||;True|2025-03-15T17:53:27.3008399-05:00||;True|2025-03-15T17:53:00.8799451-05:00||;True|2025-03-15T17:34:04.3704040-05:00||;True|2025-03-15T17:33:20.9731563-05:00||;True|2025-03-15T17:33:15.0414225-05:00||;True|2025-03-15T17:32:22.1893112-05:00||;True|2025-03-15T16:09:24.4699200-05:00||;True|2025-03-14T20:39:23.5582598-05:00||;True|2025-03-14T20:34:38.1274905-05:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

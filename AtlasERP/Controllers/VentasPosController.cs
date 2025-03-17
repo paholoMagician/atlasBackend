@@ -20,12 +20,12 @@ namespace AtlasERP.Controllers
 
         [HttpPost]
         [Route("guardarVentasPos")]
-        public async Task<IActionResult> guardarVentasPos([FromBody] Ventaspo model)
+        public async Task<IActionResult> guardarVentasPos([FromBody] VentasposCab model)
         {
 
             if (ModelState.IsValid)
             {
-                _context.Ventaspos.Add(model);
+                _context.VentasposCabs.Add(model);
                 if (await _context.SaveChangesAsync() > 0)
                 {
                     return Ok(model);

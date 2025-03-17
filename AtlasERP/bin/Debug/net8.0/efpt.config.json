@@ -2,7 +2,6 @@
    "CodeGenerationMode": 4,
    "ContextClassName": "atlasErpContext",
    "ContextNamespace": null,
-   "DefaultDacpacSchema": null,
    "FilterSchemas": false,
    "IncludeConnectionString": false,
    "ModelNamespace": null,
@@ -228,7 +227,11 @@
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[ventaspos]",
+         "Name": "[dbo].[ventasposCab]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ventasposDet]",
          "ObjectType": 0
       },
       {
@@ -440,6 +443,10 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[obtenerVentasPos]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[ProcesoTransdferenciaBod]",
          "ObjectType": 1
       },
@@ -484,12 +491,14 @@
          "ObjectType": 2
       }
    ],
-   "UiHint": "desktop-bp9emvl\\sqlexpress.atlasErp.dbo",
+   "UiHint": null,
    "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
    "UseDateOnlyTimeOnly": true,
    "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
    "UseFluentApiOnly": true,
    "UseHandleBars": false,
    "UseHierarchyId": false,
@@ -501,6 +510,7 @@
    "UseNoObjectFilter": false,
    "UseNodaTime": false,
    "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
    "UseSchemaFolders": false,
    "UseSchemaNamespaces": false,
    "UseSpatial": false,

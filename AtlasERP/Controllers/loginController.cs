@@ -63,6 +63,7 @@ namespace AtlasERP.Controllers
                 new Claim(ClaimTypes.Email, result.Email),
                 new Claim(ClaimTypes.Name, result.Nombre + ' ' + result.Apellido),
                 new Claim(ClaimTypes.NameIdentifier, result.Coduser),
+                new Claim(ClaimTypes.PrimaryGroupSid, result.CodCia),
                 new Claim(ClaimTypes.Role, result.Rol.ToString())
             }),
                     Expires = DateTime.UtcNow.AddHours(1),
