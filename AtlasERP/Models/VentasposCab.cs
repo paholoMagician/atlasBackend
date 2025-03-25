@@ -28,4 +28,6 @@ public partial class VentasposCab
     public string CodMetodoPago { get; set; }
 
     public string Codcli { get; set; }
+
+    public int? IdProcesoApertura { get; set; }
 }

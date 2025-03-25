@@ -59,7 +59,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors(builder => builder
-    .WithOrigins("http://localhost:2255", "https://atlasfarmasytem.web.app")
+    .WithOrigins("http://localhost:2259", "https://atlasfarmasytem.web.app")
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowCredentials());

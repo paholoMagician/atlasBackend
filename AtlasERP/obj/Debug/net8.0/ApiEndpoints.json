@@ -16,6 +16,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AtlasERP.Controllers.aperturaPuntoVentaController",
+    "Method": "CerrarPuntoDeVenta",
+    "RelativePath": "api/aperturaPuntoVenta/cerrarPuntoDeVenta",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AtlasERP.Models.AperturaPuntoVentum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.aperturaPuntoVentaController",
+    "Method": "GuardarAperturaPuntoVenta",
+    "RelativePath": "api/aperturaPuntoVenta/GuardarAperturaPuntoVenta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.AperturaPuntoVentum",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AtlasERP.Controllers.AsesorClienteController",
     "Method": "guardarAsignacionAsesor",
     "RelativePath": "api/Asesor/guardarAsignacionAsesor",
@@ -648,53 +680,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AtlasERP.Controllers.EmpresaController",
-    "Method": "EditarEmpresa",
-    "RelativePath": "api/Empresa/EditarEmpresa/{codcia}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "codcia",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "model",
-        "Type": "AtlasERP.Models.Empresa",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AtlasERP.Controllers.EmpresaController",
-    "Method": "guardarEmpresa",
-    "RelativePath": "api/Empresa/guardarEmpresa",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "AtlasERP.Models.Empresa",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AtlasERP.Controllers.EmpresaController",
-    "Method": "ObtenerEmpresa",
-    "RelativePath": "api/Empresa/ObtenerEmpresa",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "AtlasERP.Controllers.GarantiasController",
     "Method": "EditarGarantia",
     "RelativePath": "api/Garantias/EditarGarantia/{codgarantia}",
@@ -742,6 +727,22 @@
       {
         "Name": "codcia",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ventasPosDet",
+    "Method": "guardarVentasPosDet",
+    "RelativePath": "api/guardarVentasPosDet/guardarVentasPosDet",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.VentasposDet",
         "IsRequired": true
       }
     ],
@@ -1397,6 +1398,27 @@
   },
   {
     "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
+    "Method": "EditarCcia",
+    "RelativePath": "api/PuntosDeVenta/EditarCcia/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Ccium",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
     "Method": "EditarPuntosDeVenta",
     "RelativePath": "api/PuntosDeVenta/EditarPuntosDeVenta/{id}",
     "HttpMethod": "PUT",
@@ -1434,6 +1456,22 @@
   },
   {
     "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
+    "Method": "GuardarCcia",
+    "RelativePath": "api/PuntosDeVenta/GuardarCcia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.Ccium",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
     "Method": "guardarPuntosDeVenta",
     "RelativePath": "api/PuntosDeVenta/guardarPuntosDeVenta",
     "HttpMethod": "POST",
@@ -1446,6 +1484,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
+    "Method": "ObtenerEmpresa",
+    "RelativePath": "api/PuntosDeVenta/ObtenerEmpresa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -1864,7 +1912,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "AtlasERP.Models.Ventaspo",
+        "Type": "AtlasERP.Models.VentasposCab",
         "IsRequired": true
       }
     ],
