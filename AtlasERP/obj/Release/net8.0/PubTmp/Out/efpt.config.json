@@ -63,6 +63,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[ccia]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[cliente]",
          "ObjectType": 0
       },
@@ -80,10 +84,6 @@
       },
       {
          "Name": "[dbo].[DimDate]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[empresa]",
          "ObjectType": 0
       },
       {

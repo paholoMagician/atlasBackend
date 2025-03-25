@@ -23,6 +23,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[aperturaPuntoVenta]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[asesorcliente]",
          "ObjectType": 0
       },
@@ -63,6 +67,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[ccia]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[cliente]",
          "ObjectType": 0
       },
@@ -80,10 +88,6 @@
       },
       {
          "Name": "[dbo].[DimDate]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[empresa]",
          "ObjectType": 0
       },
       {

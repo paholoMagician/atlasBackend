@@ -1668,6 +1668,40 @@ namespace AtlasERP.Models
             return _;
         }
 
+        public virtual async Task<List<RepoOrdenTransferProdResult>> RepoOrdenTransferProdAsync(string ccia, string codcab, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "ccia",
+                    Size = 30,
+                    Value = ccia ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "codcab",
+                    Size = 35,
+                    Value = codcab ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<RepoOrdenTransferProdResult>("EXEC @returnValue = [dbo].[RepoOrdenTransferProd] @ccia = @ccia, @codcab = @codcab", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public virtual async Task<List<ReporteMantenimientoResult>> ReporteMantenimientoAsync(string tipoentidad, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter

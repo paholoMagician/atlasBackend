@@ -7,31 +7,16 @@ namespace AtlasERP.Models
 {
     public partial class ObtenerEmpresaResult
     {
-        public string codcia { get; set; }
+        public int id { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
-        public string ruc { get; set; }
-        public string direccion { get; set; }
-        public string telf1 { get; set; }
-        public string telf2 { get; set; }
-        public string provincia { get; set; }
-        public string canton { get; set; }
         [Column("iva", TypeName = "decimal(10,2)")]
         public decimal? iva { get; set; }
-        [Column("oIimp", TypeName = "decimal(10,2)")]
-        public decimal? oIimp { get; set; }
-        public string logotipoUrl { get; set; }
-        public string slogan { get; set; }
-        public string typeCia { get; set; }
-        public string textoCotizacion { get; set; }
-        public string nombrePersCargo { get; set; }
-        public string cargo { get; set; }
+        public string logotipo { get; set; }
+        public string telf { get; set; }
+        public string direccion { get; set; }
+        public string type { get; set; }
         public string email { get; set; }
-        public string website1 { get; set; }
-        public string website2 { get; set; }
-        public string firmaRepLegal { get; set; }
-        public string nombreProvincia { get; set; }
-        public string nombreCanton { get; set; }
-        public string nombreCargo { get; set; }
+        public string ruc { get; set; }
     }
 }

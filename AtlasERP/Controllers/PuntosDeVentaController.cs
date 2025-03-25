@@ -36,9 +36,7 @@ namespace AtlasERP.Controllers
         [Route("EditarPuntosDeVenta/{id}")]
         public async Task<IActionResult> EditarPuntosDeVenta([FromRoute] int id, [FromBody] PuntoDeVentum model)
         {   
-            Console.WriteLine(model.Id);
-            Console.WriteLine(id);
-
+         
             if (id != model.Id)
             {
                 return BadRequest("No existe el usuario");
@@ -65,6 +63,32 @@ namespace AtlasERP.Controllers
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.SelectCommand.CommandType = CommandType.Text;
                     adapter.SelectCommand.Parameters.Add(new SqlParameter("@ccia", codcia));
+                    adapter.Fill(dt);
+                }
+            }
+
+            if (dt == null)
+            {
+                return NotFound("No se ha podido crear...");
+            }
+
+            return Ok(dt);
+
+        }
+
+        [HttpGet("ObtenerEmpresa")]
+        public async Task<IActionResult> ObtenerEmpresa()
+        {
+
+            string Sentencia = " exec ObtenerEmpresa";
+
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(_context.Database.GetDbConnection().ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(Sentencia, connection))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.SelectCommand.CommandType = CommandType.Text;
                     adapter.Fill(dt);
                 }
             }
@@ -164,6 +188,46 @@ namespace AtlasERP.Controllers
             }
         }
 
+
+        [HttpPost]
+        [Route("GuardarCcia")]
+        public async Task<IActionResult> GuardarCcia([FromBody] Ccium model)
+        {
+
+
+            if (ModelState.IsValid)
+            {
+                _context.Ccia.Add(model);
+                if (await _context.SaveChangesAsync() > 0)
+                {
+                    return Ok(model);
+                }
+                else
+                {
+                    return BadRequest("Datos incorrectos");
+                }
+            }
+            else
+            {
+                return BadRequest("ERROR");
+            }
+        }
+
+        [HttpPut]
+        [Route("EditarCcia/{id}")]
+        public async Task<IActionResult> EditarCcia([FromRoute] int id, [FromBody] Ccium model)
+        {
+
+            if (id != model.Id)
+            {
+                return BadRequest("No existe el ccia");
+            }
+
+            _context.Entry(model).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return Ok(model);
+
+        }
 
     }
 }

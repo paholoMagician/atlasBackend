@@ -17,6 +17,8 @@ public partial class atlasErpContext : DbContext
 
     public virtual DbSet<Agencium> Agencia { get; set; }
 
+    public virtual DbSet<AperturaPuntoVentum> AperturaPuntoVenta { get; set; }
+
     public virtual DbSet<Asesorcliente> Asesorclientes { get; set; }
 
     public virtual DbSet<AsignModUser> AsignModUsers { get; set; }
@@ -37,6 +39,8 @@ public partial class atlasErpContext : DbContext
 
     public virtual DbSet<Cardinal> Cardinals { get; set; }
 
+    public virtual DbSet<Ccium> Ccia { get; set; }
+
     public virtual DbSet<Cliente> Clientes { get; set; }
 
     public virtual DbSet<Contrato> Contratos { get; set; }
@@ -46,8 +50,6 @@ public partial class atlasErpContext : DbContext
     public virtual DbSet<Cronograma1> Cronograma1s { get; set; }
 
     public virtual DbSet<DimDate> DimDates { get; set; }
-
-    public virtual DbSet<Empresa> Empresas { get; set; }
 
     public virtual DbSet<Entytrancab> Entytrancabs { get; set; }
 
@@ -241,6 +243,33 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false)
                 .IsFixedLength()
                 .HasColumnName("tipo");
+        });
+
+        modelBuilder.Entity<AperturaPuntoVentum>(entity =>
+        {
+            entity.ToTable("aperturaPuntoVenta");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Ccia)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("ccia");
+            entity.Property(e => e.Fecierre)
+                .HasColumnType("datetime")
+                .HasColumnName("fecierre");
+            entity.Property(e => e.Fecrea)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("fecrea");
+            entity.Property(e => e.Idpuntoventa).HasColumnName("idpuntoventa");
+            entity.Property(e => e.Observacion)
+                .HasMaxLength(300)
+                .IsUnicode(false)
+                .HasColumnName("observacion");
+            entity.Property(e => e.Usercrea)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("usercrea");
         });
 
         modelBuilder.Entity<Asesorcliente>(entity =>
@@ -554,6 +583,50 @@ public partial class atlasErpContext : DbContext
                 .HasColumnName("nombrelocalizacion");
         });
 
+        modelBuilder.Entity<Ccium>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_ccia1");
+
+            entity.ToTable("ccia");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Descripcion)
+                .HasMaxLength(150)
+                .IsUnicode(false)
+                .HasColumnName("descripcion");
+            entity.Property(e => e.Direccion)
+                .HasMaxLength(500)
+                .IsUnicode(false)
+                .HasColumnName("direccion");
+            entity.Property(e => e.Email)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("email");
+            entity.Property(e => e.Iva)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("iva");
+            entity.Property(e => e.Logotipo)
+                .IsUnicode(false)
+                .HasColumnName("logotipo");
+            entity.Property(e => e.Nombre)
+                .HasMaxLength(150)
+                .IsUnicode(false)
+                .HasColumnName("nombre");
+            entity.Property(e => e.Ruc)
+                .HasMaxLength(25)
+                .IsUnicode(false)
+                .HasColumnName("ruc");
+            entity.Property(e => e.Telf)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("telf");
+            entity.Property(e => e.Type)
+                .HasMaxLength(5)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("type");
+        });
+
         modelBuilder.Entity<Cliente>(entity =>
         {
             entity.HasKey(e => new { e.Codcliente, e.Ruc }).HasName("PK_cliente1_1");
@@ -776,97 +849,6 @@ public partial class atlasErpContext : DbContext
             entity.Property(e => e.MonthName)
                 .HasMaxLength(20)
                 .IsUnicode(false);
-        });
-
-        modelBuilder.Entity<Empresa>(entity =>
-        {
-            entity.HasKey(e => e.Codcia);
-
-            entity.ToTable("empresa");
-
-            entity.Property(e => e.Codcia)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("codcia");
-            entity.Property(e => e.Canton)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("canton");
-            entity.Property(e => e.Cargo)
-                .HasMaxLength(100)
-                .IsUnicode(false)
-                .HasColumnName("cargo");
-            entity.Property(e => e.Descripcion)
-                .HasMaxLength(500)
-                .IsUnicode(false)
-                .HasColumnName("descripcion");
-            entity.Property(e => e.Direccion)
-                .HasMaxLength(300)
-                .IsUnicode(false)
-                .HasColumnName("direccion");
-            entity.Property(e => e.Email)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("email");
-            entity.Property(e => e.FirmaRepLegal)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("firmaRepLegal");
-            entity.Property(e => e.Iva)
-                .HasColumnType("decimal(10, 2)")
-                .HasColumnName("iva");
-            entity.Property(e => e.LogotipoUrl)
-                .HasMaxLength(500)
-                .IsUnicode(false)
-                .HasColumnName("logotipoUrl");
-            entity.Property(e => e.Nombre)
-                .HasMaxLength(150)
-                .IsUnicode(false)
-                .HasColumnName("nombre");
-            entity.Property(e => e.NombrePersCargo)
-                .HasMaxLength(150)
-                .IsUnicode(false)
-                .HasColumnName("nombrePersCargo");
-            entity.Property(e => e.OIimp)
-                .HasColumnType("decimal(10, 2)")
-                .HasColumnName("oIimp");
-            entity.Property(e => e.Provincia)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("provincia");
-            entity.Property(e => e.Ruc)
-                .HasMaxLength(16)
-                .IsUnicode(false)
-                .HasColumnName("ruc");
-            entity.Property(e => e.Slogan)
-                .HasMaxLength(300)
-                .IsUnicode(false)
-                .HasColumnName("slogan");
-            entity.Property(e => e.Telf1)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("telf1");
-            entity.Property(e => e.Telf2)
-                .HasMaxLength(20)
-                .IsUnicode(false)
-                .HasColumnName("telf2");
-            entity.Property(e => e.TextoCotizacion)
-                .HasMaxLength(750)
-                .IsUnicode(false)
-                .HasColumnName("textoCotizacion");
-            entity.Property(e => e.TypeCia)
-                .HasMaxLength(4)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("typeCia");
-            entity.Property(e => e.Website1)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("website1");
-            entity.Property(e => e.Website2)
-                .HasMaxLength(200)
-                .IsUnicode(false)
-                .HasColumnName("website2");
         });
 
         modelBuilder.Entity<Entytrancab>(entity =>

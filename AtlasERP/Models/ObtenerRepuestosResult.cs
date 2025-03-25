@@ -7,41 +7,5 @@ namespace AtlasERP.Models
 {
     public partial class ObtenerRepuestosResult
     {
-        public string codrep { get; set; }
-        public string nombreRep { get; set; }
-        public string codigo { get; set; }
-        public string urlimagenA { get; set; }
-        public DateTime fecrea { get; set; }
-        public string usercrea { get; set; }
-        public string descripcion { get; set; }
-        public string marca { get; set; }
-        public string modelo { get; set; }
-        public bool? activo { get; set; }
-        public string codTipoMaquina { get; set; }
-        [Column("valorCompra", TypeName = "decimal(10,2)")]
-        public decimal? valorCompra { get; set; }
-        [Column("porcentajeVenta", TypeName = "decimal(10,2)")]
-        public decimal? porcentajeVenta { get; set; }
-        [Column("desccuentoAplicable", TypeName = "decimal(10,2)")]
-        public decimal? desccuentoAplicable { get; set; }
-        [Column("iva", TypeName = "decimal(10,2)")]
-        public decimal? iva { get; set; }
-        [Column("pvp", TypeName = "decimal(27,8)")]
-        public decimal? pvp { get; set; }
-        [Column("IVAvalor", TypeName = "decimal(38,10)")]
-        public decimal? IVAvalor { get; set; }
-        [Column("pvpIVA", TypeName = "decimal(38,10)")]
-        public decimal? pvpIVA { get; set; }
-        public int? idMarcaRepuesto { get; set; }
-        public int? estado { get; set; }
-        public string nombreMarcaEquipo { get; set; }
-        public string nombreModeloEquipo { get; set; }
-        public string nombreTipoDeEquipo { get; set; }
-        public string codcia { get; set; }
-        public int? cantRep { get; set; }
-        public string nombreUsuario { get; set; }
-        public string marcaRepuesto { get; set; }
-        public string nombrebodega { get; set; }
-        public int? idBodega { get; set; }
     }
 }

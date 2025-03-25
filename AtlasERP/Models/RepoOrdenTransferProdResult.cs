@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AtlasERP.Models
 {
-    public partial class ObtenerCotizacionResult
+    public partial class RepoOrdenTransferProdResult
     {
     }
 }
