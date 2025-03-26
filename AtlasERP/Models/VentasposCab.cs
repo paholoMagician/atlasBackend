@@ -30,4 +30,6 @@ public partial class VentasposCab
     public string Codcli { get; set; }
 
     public int? IdProcesoApertura { get; set; }
+
+    public int? EstadoPrint { get; set; }
 }

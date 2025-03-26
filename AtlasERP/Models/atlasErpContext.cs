@@ -838,7 +838,7 @@ public partial class atlasErpContext : DbContext
 
         modelBuilder.Entity<DimDate>(entity =>
         {
-            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E356610EEA");
+            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3F023E52E");
 
             entity.ToTable("DimDate");
 
@@ -2343,6 +2343,7 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("codcli");
             entity.Property(e => e.Estado).HasColumnName("estado");
+            entity.Property(e => e.EstadoPrint).HasColumnName("estadoPrint");
             entity.Property(e => e.Feccrea)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
@@ -2444,7 +2445,6 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false);
         });
 
-        OnModelCreatingGeneratedProcedures(modelBuilder);
         OnModelCreatingGeneratedFunctions(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
     }
