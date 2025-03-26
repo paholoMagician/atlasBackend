@@ -1920,6 +1920,43 @@
   },
   {
     "ContainingType": "AtlasERP.Controllers.VentasPosController",
+    "Method": "obtenerVentasCabTran",
+    "RelativePath": "api/ventasPos/obtenerVentasCabTran/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.VentasPosController",
+    "Method": "ObtenerVentasDetTran",
+    "RelativePath": "api/ventasPos/ObtenerVentasDetTran/{tp}/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tp",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.VentasPosController",
     "Method": "obtenerVentasPos",
     "RelativePath": "api/ventasPos/obtenerVentasPos/{codcia}",
     "HttpMethod": "GET",

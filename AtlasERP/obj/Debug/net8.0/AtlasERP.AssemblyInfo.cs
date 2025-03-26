@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AtlasERP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6574b4fea69dfcddae968236c4074e9f2e9e823c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6d4de93926977263fa3eef0b1b51abc90a6e573")]
 [assembly: System.Reflection.AssemblyProductAttribute("AtlasERP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AtlasERP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

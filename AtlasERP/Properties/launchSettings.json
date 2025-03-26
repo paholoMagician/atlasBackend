@@ -15,9 +15,9 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       //work
-      //"applicationUrl": "http://192.168.55.28:5151",
+      "applicationUrl": "http://192.168.55.28:5151",
       //home
-      "applicationUrl": "http://192.168.100.6:5151",
+      //"applicationUrl": "http://192.168.100.6:5151",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

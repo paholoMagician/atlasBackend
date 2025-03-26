@@ -68,5 +68,60 @@ namespace AtlasERP.Controllers
 
         }
 
+        [HttpGet("obtenerVentasCabTran/{id}")]
+        public async Task<IActionResult> obtenerVentasCabTran([FromRoute] int id)
+        {
+
+            string Sentencia = " exec ObtebnerVentasCabTran @IDS";
+
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(_context.Database.GetDbConnection().ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(Sentencia, connection))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.SelectCommand.CommandType = CommandType.Text;
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@IDS", id));
+                    adapter.Fill(dt);
+                }
+            }
+
+            if (dt == null)
+            {
+                return NotFound("No se ha podido crear...");
+            }
+
+            return Ok(dt);
+
+        }
+
+        [HttpGet("ObtenerVentasDetTran/{tp}/{id}")]
+        public async Task<IActionResult> ObtenerVentasDetTran([FromRoute] string tp,[FromRoute] int id)
+        {
+
+            string Sentencia = " exec ObtenerVentasDetTran @type, @IDS";
+
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(_context.Database.GetDbConnection().ConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(Sentencia, connection))
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.SelectCommand.CommandType = CommandType.Text;
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@type", tp));
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@IDS", id));
+                    adapter.Fill(dt);
+                }
+            }
+
+            if (dt == null)
+            {
+                return NotFound("No se ha podido crear...");
+            }
+
+            return Ok(dt);
+
+        }
+
     }
 }

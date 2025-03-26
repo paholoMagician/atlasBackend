@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\models\\ventasposcab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\models\\ventasposcab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\models\\atlaserpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\models\\atlaserpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\controllers\\ventasposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\controllers\\ventasposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\models\\atlaserpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\models\\atlaserpcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\controllers\\aperturapuntoventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +33,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\controllers\\puntosdeventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\controllers\\puntosdeventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|solutionrelative:atlaserp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C71D6F4-4FA1-492C-BE1D-501AEFAAA299}|AtlasERP\\AtlasERP.csproj|c:\\users\\usuario\\documents\\otherprojects\\atlasbackend\\atlaserp\\controllers\\maquinariacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,32 +59,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VentasposCab.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Models\\VentasposCab.cs",
-              "RelativeDocumentMoniker": "AtlasERP\\Models\\VentasposCab.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Models\\VentasposCab.cs",
-              "RelativeToolTip": "AtlasERP\\Models\\VentasposCab.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAswCAAAAABAAAAAAAAAA==",
+              "Title": "VentasPosController.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\VentasPosController.cs",
+              "RelativeDocumentMoniker": "AtlasERP\\Controllers\\VentasPosController.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\VentasPosController.cs",
+              "RelativeToolTip": "AtlasERP\\Controllers\\VentasPosController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T21:55:53.478Z",
+              "WhenOpened": "2025-03-26T14:21:24.095Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AtlasERP\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Properties\\launchSettings.json",
               "RelativeToolTip": "AtlasERP\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-25T18:19:36.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-26T01:07:23.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "AperturaPuntoVentum.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Models\\AperturaPuntoVentum.cs",
               "RelativeDocumentMoniker": "AtlasERP\\Models\\AperturaPuntoVentum.cs",
@@ -96,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "CerrarPuntoVentaRequest.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\DTO\\CerrarPuntoVentaRequest.cs",
               "RelativeDocumentMoniker": "AtlasERP\\DTO\\CerrarPuntoVentaRequest.cs",
@@ -108,29 +107,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\appsettings.json",
               "RelativeDocumentMoniker": "AtlasERP\\appsettings.json",
               "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\appsettings.json",
               "RelativeToolTip": "AtlasERP\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-25T04:25:59.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T04:25:59.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "aperturaPuntoVentaController.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\aperturaPuntoVentaController.cs",
               "RelativeDocumentMoniker": "AtlasERP\\Controllers\\aperturaPuntoVentaController.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\aperturaPuntoVentaController.cs",
               "RelativeToolTip": "AtlasERP\\Controllers\\aperturaPuntoVentaController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAADwv0EAAAA3AAAAAAAAAA==",
+              "ViewState": "AQIAABsAAAAAAAAAAADwv0QAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T04:24:00.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T04:24:00.23Z"
             },
             {
               "$type": "Document",
@@ -146,29 +143,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "atlasErpContext.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Models\\atlasErpContext.cs",
               "RelativeDocumentMoniker": "AtlasERP\\Models\\atlasErpContext.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Models\\atlasErpContext.cs",
               "RelativeToolTip": "AtlasERP\\Models\\atlasErpContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T02:50:38.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T02:50:38.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Program.cs",
               "RelativeDocumentMoniker": "AtlasERP\\Program.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Program.cs",
               "RelativeToolTip": "AtlasERP\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEgAAAA2AAAAAAAAAA==",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowB4AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T01:58:39.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T01:58:39.749Z"
             },
             {
               "$type": "Document",
@@ -184,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "PuntosDeVentaController.cs",
               "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\Controllers\\PuntosDeVentaController.cs",
               "RelativeDocumentMoniker": "AtlasERP\\Controllers\\PuntosDeVentaController.cs",
