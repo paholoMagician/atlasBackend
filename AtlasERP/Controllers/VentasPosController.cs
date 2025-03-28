@@ -123,5 +123,80 @@ namespace AtlasERP.Controllers
 
         }
 
+
+        //[HttpGet]
+        //[Route("ActualizarEstadoPrinterCab/{idCab}/{estado}")]
+        //public async Task<IActionResult> ActualizarEstadoPrinterCab([FromRoute] int idCab, [FromRoute] int estado)
+        //{
+        //    try
+        //    {
+        //        // Buscar el repuesto por su código
+        //        var cabTran = await _context.VentasposCabs
+        //            .FirstOrDefaultAsync(r => r.Id == idCab);
+
+        //        if (cabTran == null)
+        //        {
+        //            return NotFound($"Repuesto con código {idCab} no encontrado");
+        //        }
+
+
+
+        //        // Actualizar la cantidad de repuestos
+        //        cabTran.EstadoPrint = estado;
+
+        //        // Guardar los cambios en la base de datos
+        //        _context.Repuestos.Update(cabTran);
+        //        await _context.SaveChangesAsync();
+
+        //        // Retornar respuesta con información detallada
+        //        return Ok(cabTran);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Loggear el error (deberías implementar un sistema de logging)
+        //        return StatusCode(500, $"Error interno al actualizar el stock: {ex.Message}");
+        //    }
+        //}
+
+
+        [HttpGet]
+        [Route("ActualizarEstadoPrinterCab/{idCab}/{estado}")]
+        public async Task<IActionResult> ActualizarEstadoPrinterCab([FromRoute] int idCab, [FromRoute] int estado)
+        {
+            try
+            {
+                // Validar parámetros
+                if (idCab <= 0)
+                {
+                    return BadRequest("El ID de cabecera debe ser mayor que cero");
+                }
+
+                // Buscar la cabecera transaccional por su ID
+                var cabTran = await _context.VentasposCabs
+                    .FirstOrDefaultAsync(r => r.Id == idCab);
+
+                if (cabTran == null)
+                {
+                    return NotFound($"Cabecera transaccional con ID {idCab} no encontrada");
+                }
+
+                // Actualizar el estado de impresión
+                cabTran.EstadoPrint = estado;
+
+                // Marcar como modificado (no necesitas Update si primero hiciste FirstOrDefault)
+                _context.Entry(cabTran).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+
+                // Retornar respuesta con información detallada
+                return Ok(cabTran);
+            }
+            catch (Exception ex)
+            {
+                // Loggear el error (considera usar un logger real como ILogger)
+                return StatusCode(500, $"Error interno al actualizar el estado de impresión: {ex.Message}");
+            }
+        }
+
+
     }
 }
