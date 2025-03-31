@@ -10,7 +10,6 @@ namespace AtlasERP.Models
         public int id { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
-        [Column("iva", TypeName = "decimal(10,2)")]
         public decimal? iva { get; set; }
         public string logotipo { get; set; }
         public string telf { get; set; }

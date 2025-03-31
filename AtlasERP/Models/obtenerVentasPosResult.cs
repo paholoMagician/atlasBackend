@@ -14,14 +14,11 @@ namespace AtlasERP.Models
         public int? idPuntoVenta { get; set; }
         public int? estado { get; set; }
         public string observacion { get; set; }
-        [Column("subtotal", TypeName = "decimal(10,2)")]
         public decimal? subtotal { get; set; }
-        [Column("totalIva", TypeName = "decimal(10,2)")]
         public decimal? totalIva { get; set; }
         public string codMetodoPago { get; set; }
         public string nombreMetodoPago { get; set; }
         public string nombrePuntoVenta { get; set; }
-        [Column("totalTran", TypeName = "decimal(11,2)")]
         public decimal? totalTran { get; set; }
         public string personalVenta { get; set; }
     }

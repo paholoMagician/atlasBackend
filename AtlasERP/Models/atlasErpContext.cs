@@ -49,6 +49,8 @@ public partial class atlasErpContext : DbContext
 
     public virtual DbSet<Cronograma1> Cronograma1s { get; set; }
 
+    public virtual DbSet<DenominacionesCaja> DenominacionesCajas { get; set; }
+
     public virtual DbSet<DimDate> DimDates { get; set; }
 
     public virtual DbSet<Entytrancab> Entytrancabs { get; set; }
@@ -836,9 +838,48 @@ public partial class atlasErpContext : DbContext
             entity.Property(e => e.Semanainicio).HasColumnName("semanainicio");
         });
 
+        modelBuilder.Entity<DenominacionesCaja>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__denomina__3214EC073944087F");
+
+            entity.ToTable("denominacionesCaja");
+
+            entity.Property(e => e.Ccia)
+                .IsRequired()
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("ccia");
+            entity.Property(e => e.Estado).HasColumnName("estado");
+            entity.Property(e => e.Fecrea)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.FiftyCent).HasDefaultValue(0);
+            entity.Property(e => e.FiftyDollars).HasDefaultValue(0);
+            entity.Property(e => e.FiveCent).HasDefaultValue(0);
+            entity.Property(e => e.FiveDollars).HasDefaultValue(0);
+            entity.Property(e => e.OneCent).HasDefaultValue(0);
+            entity.Property(e => e.OneDollarBill).HasDefaultValue(0);
+            entity.Property(e => e.OneDollarCoin).HasDefaultValue(0);
+            entity.Property(e => e.OneHundredDollars).HasDefaultValue(0);
+            entity.Property(e => e.Permisos).HasColumnName("permisos");
+            entity.Property(e => e.TenCent).HasDefaultValue(0);
+            entity.Property(e => e.TenDollars).HasDefaultValue(0);
+            entity.Property(e => e.TipoOperacion)
+                .IsRequired()
+                .HasMaxLength(10)
+                .IsUnicode(false);
+            entity.Property(e => e.TwentyDollars).HasDefaultValue(0);
+            entity.Property(e => e.TwentyFiveCent).HasDefaultValue(0);
+            entity.Property(e => e.TwoDollars).HasDefaultValue(0);
+            entity.Property(e => e.UsuarioRegistro)
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+        });
+
         modelBuilder.Entity<DimDate>(entity =>
         {
-            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3A42E3011");
+            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3A792324A");
 
             entity.ToTable("DimDate");
 
@@ -2446,6 +2487,7 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false);
         });
 
+        OnModelCreatingGeneratedProcedures(modelBuilder);
         OnModelCreatingGeneratedFunctions(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
     }

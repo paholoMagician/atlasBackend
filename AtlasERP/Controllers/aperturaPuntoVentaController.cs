@@ -49,8 +49,6 @@ namespace AtlasERP.Controllers
             }
         }
 
-
-
         [HttpPut("cerrarPuntoDeVenta")]
         public async Task<IActionResult> CerrarPuntoDeVenta([FromBody] AperturaPuntoVentum request)
         {
@@ -77,11 +75,7 @@ namespace AtlasERP.Controllers
 
                 // Guardar los cambios en la base de datos
                 await _context.SaveChangesAsync();
-                Console.WriteLine("///////////////////////////////////////");
-                Console.WriteLine("///////////////////////////////////////");
                 Console.WriteLine(request.Idpuntoventa);
-                Console.WriteLine("///////////////////////////////////////");
-                Console.WriteLine("///////////////////////////////////////");
                 var puntoVentaRes = await _context.PuntoDeVenta.FindAsync(request.Idpuntoventa);
                 if (puntoVentaRes == null)
                 {

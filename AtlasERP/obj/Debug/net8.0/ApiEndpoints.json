@@ -680,6 +680,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AtlasERP.Controllers.denominacionesCajaController",
+    "Method": "guardardenominacionesCaja",
+    "RelativePath": "api/denominacionesCaja/guardardenominacionesCaja",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AtlasERP.Models.DenominacionesCaja",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AtlasERP.Controllers.GarantiasController",
     "Method": "EditarGarantia",
     "RelativePath": "api/Garantias/EditarGarantia/{codgarantia}",
@@ -1488,6 +1504,22 @@
   },
   {
     "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
+    "Method": "ObtenerDataInicialAperturaVentaBoucher",
+    "RelativePath": "api/PuntosDeVenta/ObtenerDataInicialAperturaVentaBoucher/{idPoventa}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPoventa",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.PuntosDeVentaController",
     "Method": "ObtenerEmpresa",
     "RelativePath": "api/PuntosDeVenta/ObtenerEmpresa",
     "HttpMethod": "GET",
@@ -1897,6 +1929,27 @@
       {
         "Name": "codcia",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.VentasPosController",
+    "Method": "ActualizarEstadoPrinterCab",
+    "RelativePath": "api/ventasPos/ActualizarEstadoPrinterCab/{idCab}/{estado}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCab",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "estado",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

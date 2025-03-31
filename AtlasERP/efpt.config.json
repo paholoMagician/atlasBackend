@@ -2,6 +2,7 @@
    "CodeGenerationMode": 4,
    "ContextClassName": "atlasErpContext",
    "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
    "FilterSchemas": false,
    "IncludeConnectionString": false,
    "ModelNamespace": null,
@@ -84,6 +85,10 @@
       },
       {
          "Name": "[dbo].[cronograma1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[denominacionesCaja]",
          "ObjectType": 0
       },
       {
@@ -511,14 +516,12 @@
          "ObjectType": 2
       }
    ],
-   "UiHint": null,
+   "UiHint": "desktop-bp9emvl\\sqlexpress.atlasErp.dbo",
    "UncountableWords": null,
-   "UseAsyncStoredProcedureCalls": true,
    "UseBoolPropertiesWithoutDefaultSql": false,
    "UseDatabaseNames": false,
    "UseDateOnlyTimeOnly": true,
    "UseDbContextSplitting": false,
-   "UseDecimalDataAnnotationForSprocResult": true,
    "UseFluentApiOnly": true,
    "UseHandleBars": false,
    "UseHierarchyId": false,
@@ -530,7 +533,6 @@
    "UseNoObjectFilter": false,
    "UseNodaTime": false,
    "UseNullableReferences": false,
-   "UsePrefixNavigationNaming": false,
    "UseSchemaFolders": false,
    "UseSchemaNamespaces": false,
    "UseSpatial": false,

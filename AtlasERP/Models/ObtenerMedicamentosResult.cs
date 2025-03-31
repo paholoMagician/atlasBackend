@@ -31,7 +31,6 @@ namespace AtlasERP.Models
         public string ubicacionAlmacen { get; set; }
         public string temperaturaAlmacenamiento { get; set; }
         public int? minimoStock { get; set; }
-        [Column("precioUnitario", TypeName = "decimal(10,2)")]
         public decimal? precioUnitario { get; set; }
         public bool? requiereReceta { get; set; }
         public string receta_res { get; set; }
@@ -40,18 +39,12 @@ namespace AtlasERP.Models
         public int? idPuntoVenta { get; set; }
         public string nombre_punto_venta { get; set; }
         public string instrucciones_uso { get; set; }
-        [Column("valorBlister", TypeName = "decimal(10,2)")]
         public decimal? valorBlister { get; set; }
-        [Column("valorCaja", TypeName = "decimal(10,2)")]
         public decimal? valorCaja { get; set; }
         public string observacion { get; set; }
-        [Column("precioCompra", TypeName = "decimal(10,2)")]
         public decimal? precioCompra { get; set; }
-        [Column("descuento", TypeName = "decimal(10,2)")]
         public decimal? descuento { get; set; }
-        [Column("oImp", TypeName = "decimal(10,2)")]
         public decimal? oImp { get; set; }
-        [Column("contNeto", TypeName = "decimal(10,2)")]
         public decimal? contNeto { get; set; }
         public DateTime fecRegistroSistema { get; set; }
         public string userRegister { get; set; }

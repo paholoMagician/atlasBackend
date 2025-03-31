@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PjcUTLezYGysLubEUIxMrgrFPi9+uiY2G4AqjDJQ/hw=",
+  "Hash": "5SDU7qLD83nxToZ0A0CbhpJToyIsDXYFFtFF0igSvTY=",
   "Source": "AtlasERP",
   "BasePath": "_content/AtlasERP",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "AtlasERP\\wwwroot",
       "Source": "AtlasERP",
-      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\962dc32f046139c6986454dabfda541f.jpg\\962dc32f046139c6986454dabfda541f.jpg",
+      "Identity": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\storage\\962dc32f046139c6986454dabfda541f.jpg\\962dc32f046139c6986454dabfda541f.jpg",
       "SourceId": "AtlasERP",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "RelativePath": "storage/962dc32f046139c6986454dabfda541f.jpg/962dc32f046139c6986454dabfda541f.jpg",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\storage\\962dc32f046139c6986454dabfda541f.jpg\\962dc32f046139c6986454dabfda541f.jpg"
     },
     {
-      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\atlas_erp_logo_b.png\\atlas_erp_logo_b.png",
+      "Identity": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\storage\\atlas_erp_logo_b.png\\atlas_erp_logo_b.png",
       "SourceId": "AtlasERP",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "RelativePath": "storage/atlas_erp_logo_b.png/atlas_erp_logo_b.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\storage\\atlas_erp_logo_b.png\\atlas_erp_logo_b.png"
     },
     {
-      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\download.jpeg\\download.jpeg",
+      "Identity": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\storage\\download.jpeg\\download.jpeg",
       "SourceId": "AtlasERP",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "RelativePath": "storage/download.jpeg/download.jpeg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\storage\\download.jpeg\\download.jpeg"
     },
     {
-      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\imagenesProductos\\472544041_923479163263864_7772628533330511877_n.jpg\\472544041_923479163263864_7772628533330511877_n.jpg",
+      "Identity": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\storage\\imagenesProductos\\472544041_923479163263864_7772628533330511877_n.jpg\\472544041_923479163263864_7772628533330511877_n.jpg",
       "SourceId": "AtlasERP",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "RelativePath": "storage/imagenesProductos/472544041_923479163263864_7772628533330511877_n.jpg/472544041_923479163263864_7772628533330511877_n.jpg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\storage\\imagenesProductos\\472544041_923479163263864_7772628533330511877_n.jpg\\472544041_923479163263864_7772628533330511877_n.jpg"
     },
     {
-      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\imagenesProductos\\474688285_927821479478430_8827890991493839555_n.jpg\\474688285_927821479478430_8827890991493839555_n.jpg",
+      "Identity": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\storage\\imagenesProductos\\474688285_927821479478430_8827890991493839555_n.jpg\\474688285_927821479478430_8827890991493839555_n.jpg",
       "SourceId": "AtlasERP",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "RelativePath": "storage/imagenesProductos/474688285_927821479478430_8827890991493839555_n.jpg/474688285_927821479478430_8827890991493839555_n.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\storage\\imagenesProductos\\474688285_927821479478430_8827890991493839555_n.jpg\\474688285_927821479478430_8827890991493839555_n.jpg"
     },
     {
-      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\imagenesProductos\\download.jpeg\\download.jpeg",
+      "Identity": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\storage\\imagenesProductos\\download.jpeg\\download.jpeg",
       "SourceId": "AtlasERP",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "RelativePath": "storage/imagenesProductos/download.jpeg/download.jpeg",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\storage\\imagenesProductos\\download.jpeg\\download.jpeg"
     },
     {
-      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\imagenesProductos\\images.jpeg\\images.jpeg",
+      "Identity": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\storage\\imagenesProductos\\images.jpeg\\images.jpeg",
       "SourceId": "AtlasERP",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "RelativePath": "storage/imagenesProductos/images.jpeg/images.jpeg",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\storage\\imagenesProductos\\images.jpeg\\images.jpeg"
     },
     {
-      "Identity": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\storage\\images.jpeg\\images.jpeg",
+      "Identity": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\storage\\images.jpeg\\images.jpeg",
       "SourceId": "AtlasERP",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\pahol\\Desktop\\projectERP\\atlasBackend\\AtlasERP\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\USUARIO\\Documents\\otherProjects\\atlasBackend\\AtlasERP\\wwwroot\\",
       "BasePath": "_content/AtlasERP",
       "RelativePath": "storage/images.jpeg/images.jpeg",
       "AssetKind": "All",

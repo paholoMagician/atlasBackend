@@ -11,7 +11,7 @@ namespace AtlasERP.Models
     {
 
         [DbFunction("CalcularFecha", "dbo")]
-        public static DateOnly? CalcularFecha(string codFrecuencia, DateOnly? fechaIngreso)
+        public static DateTime? CalcularFecha(string codFrecuencia, DateTime? fechaIngreso)
         {
             throw new NotSupportedException("This method can only be called from Entity Framework Core queries");
         }
