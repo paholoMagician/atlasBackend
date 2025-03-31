@@ -838,7 +838,7 @@ public partial class atlasErpContext : DbContext
 
         modelBuilder.Entity<DimDate>(entity =>
         {
-            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3F023E52E");
+            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3A42E3011");
 
             entity.ToTable("DimDate");
 
@@ -1851,6 +1851,7 @@ public partial class atlasErpContext : DbContext
                 .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("direccion");
+            entity.Property(e => e.Estado).HasColumnName("estado");
             entity.Property(e => e.Fecrea)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")

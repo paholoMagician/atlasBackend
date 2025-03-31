@@ -24,4 +24,6 @@ public partial class PuntoDeVentum
     public DateTime Fecrea { get; set; }
 
     public string Usercrea { get; set; }
+
+    public int? Estado { get; set; }
 }

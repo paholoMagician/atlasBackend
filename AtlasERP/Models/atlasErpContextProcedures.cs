@@ -725,6 +725,32 @@ namespace AtlasERP.Models
             return _;
         }
 
+        public virtual async Task<List<ObtebnerVentasCabTranResult>> ObtebnerVentasCabTranAsync(int? idCab, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "idCab",
+                    Value = idCab ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<ObtebnerVentasCabTranResult>("EXEC @returnValue = [dbo].[ObtebnerVentasCabTran] @idCab = @idCab", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
         public virtual async Task<List<ObtenerAgenciasResult>> ObtenerAgenciasAsync(string ccia, string filter, string codProv, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
         {
             var parameterreturnValue = new SqlParameter
@@ -1077,6 +1103,32 @@ namespace AtlasERP.Models
                 parameterreturnValue,
             };
             var _ = await _context.SqlQueryAsync<ObtenerCronoResult>("EXEC @returnValue = [dbo].[ObtenerCrono] @ccia = @ccia, @anio = @anio, @mes = @mes, @localidad = @localidad, @tipo = @tipo, @userTecnic = @userTecnic", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
+        public virtual async Task<List<ObtenerDatosGeneralesPuntoVentaResult>> ObtenerDatosGeneralesPuntoVentaAsync(int? idPvo, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "idPvo",
+                    Value = idPvo ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<ObtenerDatosGeneralesPuntoVentaResult>("EXEC @returnValue = [dbo].[ObtenerDatosGeneralesPuntoVenta] @idPvo = @idPvo", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 
@@ -1621,6 +1673,39 @@ namespace AtlasERP.Models
                 parameterreturnValue,
             };
             var _ = await _context.SqlQueryAsync<ObtenerUsuarioUnitResult>("EXEC @returnValue = [dbo].[ObtenerUsuarioUnit] @coduser = @coduser, @email = @email", sqlParameters, cancellationToken);
+
+            returnValue?.SetValue(parameterreturnValue.Value);
+
+            return _;
+        }
+
+        public virtual async Task<List<ObtenerVentasDetTranResult>> ObtenerVentasDetTranAsync(string type, int? idcab, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default)
+        {
+            var parameterreturnValue = new SqlParameter
+            {
+                ParameterName = "returnValue",
+                Direction = System.Data.ParameterDirection.Output,
+                SqlDbType = System.Data.SqlDbType.Int,
+            };
+
+            var sqlParameters = new []
+            {
+                new SqlParameter
+                {
+                    ParameterName = "type",
+                    Size = 15,
+                    Value = type ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.VarChar,
+                },
+                new SqlParameter
+                {
+                    ParameterName = "idcab",
+                    Value = idcab ?? Convert.DBNull,
+                    SqlDbType = System.Data.SqlDbType.Int,
+                },
+                parameterreturnValue,
+            };
+            var _ = await _context.SqlQueryAsync<ObtenerVentasDetTranResult>("EXEC @returnValue = [dbo].[ObtenerVentasDetTran] @type = @type, @idcab = @idcab", sqlParameters, cancellationToken);
 
             returnValue?.SetValue(parameterreturnValue.Value);
 

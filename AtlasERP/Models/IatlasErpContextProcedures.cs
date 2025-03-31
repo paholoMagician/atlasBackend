@@ -31,6 +31,7 @@ namespace AtlasERP.Models
         Task<List<MaquinariaAgenciaResult>> MaquinariaAgenciaAsync(string filter, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<MaquinariaBodegaClienteResult>> MaquinariaBodegaClienteAsync(string codcliente, string ccia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObetenerTecnicoProvinciasResult>> ObetenerTecnicoProvinciasAsync(string ccuser, string ccia, int? tp, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<List<ObtebnerVentasCabTranResult>> ObtebnerVentasCabTranAsync(int? idCab, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerAgenciasResult>> ObtenerAgenciasAsync(string ccia, string filter, string codProv, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<obtenerAgenciasCardinalResult>> obtenerAgenciasCardinalAsync(string ccli, string ccia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerAgenciasLocalidadResult>> ObtenerAgenciasLocalidadAsync(int? localidadId, string zonificacion, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
@@ -42,6 +43,7 @@ namespace AtlasERP.Models
         Task<List<ObtenerContratosResult>> ObtenerContratosAsync(string codcia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerCotizacionResult>> ObtenerCotizacionAsync(int? idTicket, string codcia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerCronoResult>> ObtenerCronoAsync(string ccia, int? anio, int? mes, int? localidad, int? tipo, string userTecnic, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<List<ObtenerDatosGeneralesPuntoVentaResult>> ObtenerDatosGeneralesPuntoVentaAsync(int? idPvo, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerEmpresaResult>> ObtenerEmpresaAsync(OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<obtenerGruposMarcasMaqResult>> obtenerGruposMarcasMaqAsync(string codigo, string codMarca, int? tipo, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerItemsBodegasResult>> ObtenerItemsBodegasAsync(int? codbodega, int? state, int? type, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
@@ -59,6 +61,7 @@ namespace AtlasERP.Models
         Task<List<ObtenerTicketsRequerimientosResult>> ObtenerTicketsRequerimientosAsync(string codcli, string ccia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerUsuariosResult>> ObtenerUsuariosAsync(string codCia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<ObtenerUsuarioUnitResult>> ObtenerUsuarioUnitAsync(string coduser, string email, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<List<ObtenerVentasDetTranResult>> ObtenerVentasDetTranAsync(string type, int? idcab, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<obtenerVentasPosResult>> obtenerVentasPosAsync(string ccia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<int> ProcesoTransdferenciaBodAsync(string codprod, int? state, string codusercrea, int? boden, int? bodsal, string ccia, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<List<RepoOrdenTransferProdResult>> RepoOrdenTransferProdAsync(string ccia, string codcab, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);

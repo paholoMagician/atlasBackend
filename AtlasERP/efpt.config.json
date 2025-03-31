@@ -323,6 +323,10 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[ObtebnerVentasCabTran]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[ObtenerAgencias]",
          "ObjectType": 1
       },
@@ -372,6 +376,10 @@
       },
       {
          "Name": "[dbo].[ObtenerCronoMobilTecnico]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerDatosGeneralesPuntoVenta]",
          "ObjectType": 1
       },
       {
@@ -448,6 +456,10 @@
       },
       {
          "Name": "[dbo].[ObtenerUsuarioUnit]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerVentasDetTran]",
          "ObjectType": 1
       },
       {

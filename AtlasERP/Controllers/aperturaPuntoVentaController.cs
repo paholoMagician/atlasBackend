@@ -23,25 +23,34 @@ namespace AtlasERP.Controllers
         [Route("GuardarAperturaPuntoVenta")]
         public async Task<IActionResult> GuardarAperturaPuntoVenta([FromBody] AperturaPuntoVentum model)
         {
-
-
             if (ModelState.IsValid)
             {
+                // 1. Guardar la apertura
                 _context.AperturaPuntoVenta.Add(model);
-                if (await _context.SaveChangesAsync() > 0)
+
+                // 2. Cambiar el estado del punto de venta a "1" (Abierto)
+                var puntoVenta = await _context.PuntoDeVenta.FindAsync(model.Idpuntoventa);
+                if (puntoVenta == null)
                 {
-                    return Ok(model);
+                    return NotFound("Punto de venta no encontrado");
                 }
-                else
-                {
-                    return BadRequest("Datos incorrectos");
-                }
+
+                puntoVenta.Estado = 1;
+                _context.PuntoDeVenta.Update(puntoVenta);
+
+                // 3. Guardar ambos cambios en una transacción
+                await _context.SaveChangesAsync(); // Guarda apertura + actualización de estado
+
+                return Ok(model);
             }
             else
             {
-                return BadRequest("ERROR");
+                return BadRequest("ERROR: Modelo inválido");
             }
         }
+
+
+
         [HttpPut("cerrarPuntoDeVenta")]
         public async Task<IActionResult> CerrarPuntoDeVenta([FromBody] AperturaPuntoVentum request)
         {
@@ -68,6 +77,21 @@ namespace AtlasERP.Controllers
 
                 // Guardar los cambios en la base de datos
                 await _context.SaveChangesAsync();
+                Console.WriteLine("///////////////////////////////////////");
+                Console.WriteLine("///////////////////////////////////////");
+                Console.WriteLine(request.Idpuntoventa);
+                Console.WriteLine("///////////////////////////////////////");
+                Console.WriteLine("///////////////////////////////////////");
+                var puntoVentaRes = await _context.PuntoDeVenta.FindAsync(request.Idpuntoventa);
+                if (puntoVentaRes == null)
+                {
+                    return NotFound("Punto de venta no encontrado");
+                }
+                puntoVentaRes.Estado = 0;
+                _context.PuntoDeVenta.Update(puntoVentaRes);
+
+                // 3. Guardar ambos cambios en una transacción
+                await _context.SaveChangesAsync(); // Guarda apertura + actualización de estado
 
                 return Ok(new { message = "Punto de venta cerrado exitosamente." });
             }
