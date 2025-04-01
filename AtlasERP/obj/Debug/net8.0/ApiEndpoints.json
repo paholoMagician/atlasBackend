@@ -750,6 +750,22 @@
   },
   {
     "ContainingType": "AtlasERP.Controllers.ventasPosDet",
+    "Method": "editarStockProd",
+    "RelativePath": "api/guardarVentasPosDet/ActualizarStock",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AtlasERP.DTO.ActualizarStockRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ventasPosDet",
     "Method": "guardarVentasPosDet",
     "RelativePath": "api/guardarVentasPosDet/guardarVentasPosDet",
     "HttpMethod": "POST",
@@ -759,6 +775,22 @@
       {
         "Name": "model",
         "Type": "AtlasERP.Models.VentasposDet",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AtlasERP.Controllers.ventasPosDet",
+    "Method": "ObtenerDetalleVentas",
+    "RelativePath": "api/guardarVentasPosDet/ObtenerDetalleVentas/{idApeVen}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idApeVen",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
