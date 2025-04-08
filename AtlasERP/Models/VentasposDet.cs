@@ -18,4 +18,6 @@ public partial class VentasposDet
     public decimal? Pvp { get; set; }
 
     public int? IdCab { get; set; }
+
+    public string Type { get; set; }
 }

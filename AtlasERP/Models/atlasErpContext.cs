@@ -840,7 +840,7 @@ public partial class atlasErpContext : DbContext
 
         modelBuilder.Entity<DenominacionesCaja>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__denomina__3214EC073944087F");
+            entity.HasKey(e => e.Id).HasName("PK__denomina__3214EC07F2CF9968");
 
             entity.ToTable("denominacionesCaja");
 
@@ -879,7 +879,7 @@ public partial class atlasErpContext : DbContext
 
         modelBuilder.Entity<DimDate>(entity =>
         {
-            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E3A792324A");
+            entity.HasKey(e => e.DateKey).HasName("PK__DimDate__40DF45E318BB8806");
 
             entity.ToTable("DimDate");
 
@@ -1724,6 +1724,9 @@ public partial class atlasErpContext : DbContext
             entity.Property(e => e.ContNeto)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("contNeto");
+            entity.Property(e => e.ConteBlister).HasColumnName("conteBlister");
+            entity.Property(e => e.ConteCap).HasColumnName("conteCap");
+            entity.Property(e => e.ConteCuchar).HasColumnName("conteCuchar");
             entity.Property(e => e.Contraindicaciones)
                 .IsUnicode(false)
                 .HasColumnName("contraindicaciones");
@@ -2422,6 +2425,10 @@ public partial class atlasErpContext : DbContext
             entity.Property(e => e.Pvp)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("pvp");
+            entity.Property(e => e.Type)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("type");
         });
 
         modelBuilder.Entity<VersionCm>(entity =>
@@ -2487,7 +2494,6 @@ public partial class atlasErpContext : DbContext
                 .IsUnicode(false);
         });
 
-        OnModelCreatingGeneratedProcedures(modelBuilder);
         OnModelCreatingGeneratedFunctions(modelBuilder);
         OnModelCreatingPartial(modelBuilder);
     }

@@ -84,4 +84,10 @@ public partial class ProductosMedicamento
     public string Codcia { get; set; }
 
     public string Categoria { get; set; }
+
+    public int? ConteBlister { get; set; }
+
+    public int? ConteCap { get; set; }
+
+    public int? ConteCuchar { get; set; }
 }

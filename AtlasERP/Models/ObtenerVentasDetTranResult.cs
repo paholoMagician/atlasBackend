@@ -11,8 +11,10 @@ namespace AtlasERP.Models
         public int? codprod { get; set; }
         public int? estado { get; set; }
         public int? cantidad { get; set; }
+        [Column("pvp", TypeName = "decimal(10,2)")]
         public decimal? pvp { get; set; }
         public int? idCab { get; set; }
+        public string type { get; set; }
         public string nombre { get; set; }
     }
 }

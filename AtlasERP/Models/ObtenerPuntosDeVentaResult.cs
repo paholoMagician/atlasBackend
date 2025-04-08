@@ -16,6 +16,7 @@ namespace AtlasERP.Models
         public string cod_cia { get; set; }
         public DateTime fecrea { get; set; }
         public string usercrea { get; set; }
+        public int? estado { get; set; }
         public string nUsuario { get; set; }
         public string nombreProvincia { get; set; }
         public string nombreCanton { get; set; }
