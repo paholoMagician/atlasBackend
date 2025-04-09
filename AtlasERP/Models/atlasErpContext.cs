@@ -2409,6 +2409,9 @@ public partial class atlasErpContext : DbContext
                 .HasMaxLength(30)
                 .IsUnicode(false)
                 .HasColumnName("usercrea");
+            entity.Property(e => e.ValorPago)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("valorPago");
         });
 
         modelBuilder.Entity<VentasposDet>(entity =>

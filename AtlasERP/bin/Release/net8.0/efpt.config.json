@@ -23,6 +23,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[aperturaPuntoVenta]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[asesorcliente]",
          "ObjectType": 0
       },
@@ -80,6 +84,10 @@
       },
       {
          "Name": "[dbo].[cronograma1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[denominacionesCaja]",
          "ObjectType": 0
       },
       {
@@ -263,6 +271,10 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[cierrePuntoVenta]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[CliBodegAsign]",
          "ObjectType": 1
       },
@@ -315,6 +327,10 @@
          "ObjectType": 1
       },
       {
+         "Name": "[dbo].[ObtebnerVentasCabTran]",
+         "ObjectType": 1
+      },
+      {
          "Name": "[dbo].[ObtenerAgencias]",
          "ObjectType": 1
       },
@@ -364,6 +380,14 @@
       },
       {
          "Name": "[dbo].[ObtenerCronoMobilTecnico]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerDatosGeneralesPuntoVenta]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerDetallesVentaAperturaInterfaz]",
          "ObjectType": 1
       },
       {
@@ -440,6 +464,10 @@
       },
       {
          "Name": "[dbo].[ObtenerUsuarioUnit]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ObtenerVentasDetTran]",
          "ObjectType": 1
       },
       {

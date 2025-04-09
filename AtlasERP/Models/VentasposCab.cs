@@ -32,4 +32,6 @@ public partial class VentasposCab
     public int? IdProcesoApertura { get; set; }
 
     public int? EstadoPrint { get; set; }
+
+    public decimal? ValorPago { get; set; }
 }
