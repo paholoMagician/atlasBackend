@@ -68,12 +68,11 @@ namespace AtlasERP.Controllers
 
         }
 
-        [HttpGet("obtenerVentasCabTran/{id}")]
-        public async Task<IActionResult> obtenerVentasCabTran([FromRoute] int id)
+        [HttpGet("obtenerVentasCabTran/{id}/{type}")]
+        public async Task<IActionResult> obtenerVentasCabTran([FromRoute] int id, [FromRoute] int type)
         {
 
-            string Sentencia = " exec ObtebnerVentasCabTran @IDS";
-
+            string Sentencia = " exec ObtebnerVentasCabTran @IDS, @tp";
             DataTable dt = new DataTable();
             using (SqlConnection connection = new SqlConnection(_context.Database.GetDbConnection().ConnectionString))
             {
@@ -82,6 +81,7 @@ namespace AtlasERP.Controllers
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     adapter.SelectCommand.CommandType = CommandType.Text;
                     adapter.SelectCommand.Parameters.Add(new SqlParameter("@IDS", id));
+                    adapter.SelectCommand.Parameters.Add(new SqlParameter("@tp", type));
                     adapter.Fill(dt);
                 }
             }
